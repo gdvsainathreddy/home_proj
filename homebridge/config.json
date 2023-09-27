@@ -1,0 +1,4522 @@
+{
+    "bridge": {
+        "name": "Homebridge 5D26",
+        "username": "0E:12:D4:5C:5D:26",
+        "port": 51693,
+        "pin": "770-80-066"
+    },
+    "accessories": [
+        {
+            "name": "Leaving home",
+            "stateful": true,
+            "reverse": false,
+            "time": 1000,
+            "resettable": false,
+            "accessory": "DummySwitch"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht0",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio0/on/",
+            "offUrl": "http://192.168.0.152/gpio0/off/",
+            "statusUrl": "http://192.168.0.152/gpio0/status/",
+            "_bridge": {
+                "username": "0E:62:F8:80:A7:73",
+                "port": 56827
+            }
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht1",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio1/on/",
+            "offUrl": "http://192.168.0.152/gpio1/off/",
+            "statusUrl": "http://192.168.0.152/gpio1/status/",
+            "_bridge": {
+                "username": "0E:84:42:91:BC:B6",
+                "port": 36915
+            }
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht2",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio2/on/",
+            "offUrl": "http://192.168.0.152/gpio2/off/",
+            "statusUrl": "http://192.168.0.152/gpio2/status/",
+            "_bridge": {
+                "username": "0E:9C:31:13:13:14",
+                "port": 32983
+            }
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht3",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio3/on/",
+            "offUrl": "http://192.168.0.152/gpio3/off/",
+            "statusUrl": "http://192.168.0.152/gpio3/status/",
+            "_bridge": {
+                "username": "0E:5A:38:C9:03:83",
+                "port": 42279
+            }
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht4",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio4/on/",
+            "offUrl": "http://192.168.0.152/gpio4/off/",
+            "statusUrl": "http://192.168.0.152/gpio4/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht5",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio5/on/",
+            "offUrl": "http://192.168.0.152/gpio5/off/",
+            "statusUrl": "http://192.168.0.152/gpio5/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht6",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio6/on/",
+            "offUrl": "http://192.168.0.152/gpio6/off/",
+            "statusUrl": "http://192.168.0.152/gpio6/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht7",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio7/on/",
+            "offUrl": "http://192.168.0.152/gpio7/off/",
+            "statusUrl": "http://192.168.0.152/gpio7/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht8",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio8/on/",
+            "offUrl": "http://192.168.0.152/gpio8/off/",
+            "statusUrl": "http://192.168.0.152/gpio8/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht9",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio9/on/",
+            "offUrl": "http://192.168.0.152/gpio9/off/",
+            "statusUrl": "http://192.168.0.152/gpio9/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht10",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio10/on/",
+            "offUrl": "http://192.168.0.152/gpio10/off/",
+            "statusUrl": "http://192.168.0.152/gpio10/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht11",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio11/on/",
+            "offUrl": "http://192.168.0.152/gpio11/off/",
+            "statusUrl": "http://192.168.0.152/gpio11/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht12",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio12/on/",
+            "offUrl": "http://192.168.0.152/gpio12/off/",
+            "statusUrl": "http://192.168.0.152/gpio12/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht13",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio13/on/",
+            "offUrl": "http://192.168.0.152/gpio13/off/",
+            "statusUrl": "http://192.168.0.152/gpio13/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht14",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio14/on/",
+            "offUrl": "http://192.168.0.152/gpio14/off/",
+            "statusUrl": "http://192.168.0.152/gpio14/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht15",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio15/on/",
+            "offUrl": "http://192.168.0.152/gpio15/off/",
+            "statusUrl": "http://192.168.0.152/gpio15/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht16",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio16/on/",
+            "offUrl": "http://192.168.0.152/gpio16/off/",
+            "statusUrl": "http://192.168.0.152/gpio16/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht17",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio17/on/",
+            "offUrl": "http://192.168.0.152/gpio17/off/",
+            "statusUrl": "http://192.168.0.152/gpio17/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht18",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio18/on/",
+            "offUrl": "http://192.168.0.152/gpio18/off/",
+            "statusUrl": "http://192.168.0.152/gpio18/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht19",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio19/on/",
+            "offUrl": "http://192.168.0.152/gpio19/off/",
+            "statusUrl": "http://192.168.0.152/gpio19/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht20",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio20/on/",
+            "offUrl": "http://192.168.0.152/gpio20/off/",
+            "statusUrl": "http://192.168.0.152/gpio20/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht21",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio21/on/",
+            "offUrl": "http://192.168.0.152/gpio21/off/",
+            "statusUrl": "http://192.168.0.152/gpio21/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht22",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio22/on/",
+            "offUrl": "http://192.168.0.152/gpio22/off/",
+            "statusUrl": "http://192.168.0.152/gpio22/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht23",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio23/on/",
+            "offUrl": "http://192.168.0.152/gpio23/off/",
+            "statusUrl": "http://192.168.0.152/gpio23/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht24",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio24/on/",
+            "offUrl": "http://192.168.0.152/gpio24/off/",
+            "statusUrl": "http://192.168.0.152/gpio24/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht25",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio25/on/",
+            "offUrl": "http://192.168.0.152/gpio25/off/",
+            "statusUrl": "http://192.168.0.152/gpio25/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht26",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio26/on/",
+            "offUrl": "http://192.168.0.152/gpio26/off/",
+            "statusUrl": "http://192.168.0.152/gpio26/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht27",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio27/on/",
+            "offUrl": "http://192.168.0.152/gpio27/off/",
+            "statusUrl": "http://192.168.0.152/gpio27/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht28",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio28/on/",
+            "offUrl": "http://192.168.0.152/gpio28/off/",
+            "statusUrl": "http://192.168.0.152/gpio28/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht29",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio29/on/",
+            "offUrl": "http://192.168.0.152/gpio29/off/",
+            "statusUrl": "http://192.168.0.152/gpio29/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht30",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio30/on/",
+            "offUrl": "http://192.168.0.152/gpio30/off/",
+            "statusUrl": "http://192.168.0.152/gpio30/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht31",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio31/on/",
+            "offUrl": "http://192.168.0.152/gpio31/off/",
+            "statusUrl": "http://192.168.0.152/gpio31/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht32",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio32/on/",
+            "offUrl": "http://192.168.0.152/gpio32/off/",
+            "statusUrl": "http://192.168.0.152/gpio32/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht33",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio33/on/",
+            "offUrl": "http://192.168.0.152/gpio33/off/",
+            "statusUrl": "http://192.168.0.152/gpio33/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht34",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio34/on/",
+            "offUrl": "http://192.168.0.152/gpio34/off/",
+            "statusUrl": "http://192.168.0.152/gpio34/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht35",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio35/on/",
+            "offUrl": "http://192.168.0.152/gpio35/off/",
+            "statusUrl": "http://192.168.0.152/gpio35/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht36",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio36/on/",
+            "offUrl": "http://192.168.0.152/gpio36/off/",
+            "statusUrl": "http://192.168.0.152/gpio36/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht37",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio37/on/",
+            "offUrl": "http://192.168.0.152/gpio37/off/",
+            "statusUrl": "http://192.168.0.152/gpio37/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht38",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio38/on/",
+            "offUrl": "http://192.168.0.152/gpio38/off/",
+            "statusUrl": "http://192.168.0.152/gpio38/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht39",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio39/on/",
+            "offUrl": "http://192.168.0.152/gpio39/off/",
+            "statusUrl": "http://192.168.0.152/gpio39/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht40",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio40/on/",
+            "offUrl": "http://192.168.0.152/gpio40/off/",
+            "statusUrl": "http://192.168.0.152/gpio40/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht41",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio41/on/",
+            "offUrl": "http://192.168.0.152/gpio41/off/",
+            "statusUrl": "http://192.168.0.152/gpio41/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht42",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio42/on/",
+            "offUrl": "http://192.168.0.152/gpio42/off/",
+            "statusUrl": "http://192.168.0.152/gpio42/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht43",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio43/on/",
+            "offUrl": "http://192.168.0.152/gpio43/off/",
+            "statusUrl": "http://192.168.0.152/gpio43/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht44",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio44/on/",
+            "offUrl": "http://192.168.0.152/gpio44/off/",
+            "statusUrl": "http://192.168.0.152/gpio44/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht45",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio45/on/",
+            "offUrl": "http://192.168.0.152/gpio45/off/",
+            "statusUrl": "http://192.168.0.152/gpio45/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht46",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio46/on/",
+            "offUrl": "http://192.168.0.152/gpio46/off/",
+            "statusUrl": "http://192.168.0.152/gpio46/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht47",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio47/on/",
+            "offUrl": "http://192.168.0.152/gpio47/off/",
+            "statusUrl": "http://192.168.0.152/gpio47/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht48",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio48/on/",
+            "offUrl": "http://192.168.0.152/gpio48/off/",
+            "statusUrl": "http://192.168.0.152/gpio48/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht49",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio49/on/",
+            "offUrl": "http://192.168.0.152/gpio49/off/",
+            "statusUrl": "http://192.168.0.152/gpio49/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht50",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio50/on/",
+            "offUrl": "http://192.168.0.152/gpio50/off/",
+            "statusUrl": "http://192.168.0.152/gpio50/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht51",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio51/on/",
+            "offUrl": "http://192.168.0.152/gpio51/off/",
+            "statusUrl": "http://192.168.0.152/gpio51/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht52",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio52/on/",
+            "offUrl": "http://192.168.0.152/gpio52/off/",
+            "statusUrl": "http://192.168.0.152/gpio52/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht53",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio53/on/",
+            "offUrl": "http://192.168.0.152/gpio53/off/",
+            "statusUrl": "http://192.168.0.152/gpio53/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht54",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio54/on/",
+            "offUrl": "http://192.168.0.152/gpio54/off/",
+            "statusUrl": "http://192.168.0.152/gpio54/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht55",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio55/on/",
+            "offUrl": "http://192.168.0.152/gpio55/off/",
+            "statusUrl": "http://192.168.0.152/gpio55/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht56",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio56/on/",
+            "offUrl": "http://192.168.0.152/gpio56/off/",
+            "statusUrl": "http://192.168.0.152/gpio56/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht57",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio57/on/",
+            "offUrl": "http://192.168.0.152/gpio57/off/",
+            "statusUrl": "http://192.168.0.152/gpio57/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht58",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio58/on/",
+            "offUrl": "http://192.168.0.152/gpio58/off/",
+            "statusUrl": "http://192.168.0.152/gpio58/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht59",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio59/on/",
+            "offUrl": "http://192.168.0.152/gpio59/off/",
+            "statusUrl": "http://192.168.0.152/gpio59/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht60",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio60/on/",
+            "offUrl": "http://192.168.0.152/gpio60/off/",
+            "statusUrl": "http://192.168.0.152/gpio60/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht61",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio61/on/",
+            "offUrl": "http://192.168.0.152/gpio61/off/",
+            "statusUrl": "http://192.168.0.152/gpio61/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht62",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio62/on/",
+            "offUrl": "http://192.168.0.152/gpio62/off/",
+            "statusUrl": "http://192.168.0.152/gpio62/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht63",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio63/on/",
+            "offUrl": "http://192.168.0.152/gpio63/off/",
+            "statusUrl": "http://192.168.0.152/gpio63/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht64",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio64/on/",
+            "offUrl": "http://192.168.0.152/gpio64/off/",
+            "statusUrl": "http://192.168.0.152/gpio64/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht65",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio65/on/",
+            "offUrl": "http://192.168.0.152/gpio65/off/",
+            "statusUrl": "http://192.168.0.152/gpio65/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht66",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio66/on/",
+            "offUrl": "http://192.168.0.152/gpio66/off/",
+            "statusUrl": "http://192.168.0.152/gpio66/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht67",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio67/on/",
+            "offUrl": "http://192.168.0.152/gpio67/off/",
+            "statusUrl": "http://192.168.0.152/gpio67/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht68",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio68/on/",
+            "offUrl": "http://192.168.0.152/gpio68/off/",
+            "statusUrl": "http://192.168.0.152/gpio68/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht69",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio69/on/",
+            "offUrl": "http://192.168.0.152/gpio69/off/",
+            "statusUrl": "http://192.168.0.152/gpio69/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht70",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio70/on/",
+            "offUrl": "http://192.168.0.152/gpio70/off/",
+            "statusUrl": "http://192.168.0.152/gpio70/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht71",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio71/on/",
+            "offUrl": "http://192.168.0.152/gpio71/off/",
+            "statusUrl": "http://192.168.0.152/gpio71/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht72",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio72/on/",
+            "offUrl": "http://192.168.0.152/gpio72/off/",
+            "statusUrl": "http://192.168.0.152/gpio72/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht73",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio73/on/",
+            "offUrl": "http://192.168.0.152/gpio73/off/",
+            "statusUrl": "http://192.168.0.152/gpio73/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht74",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio74/on/",
+            "offUrl": "http://192.168.0.152/gpio74/off/",
+            "statusUrl": "http://192.168.0.152/gpio74/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht75",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio75/on/",
+            "offUrl": "http://192.168.0.152/gpio75/off/",
+            "statusUrl": "http://192.168.0.152/gpio75/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht76",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio76/on/",
+            "offUrl": "http://192.168.0.152/gpio76/off/",
+            "statusUrl": "http://192.168.0.152/gpio76/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht77",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio77/on/",
+            "offUrl": "http://192.168.0.152/gpio77/off/",
+            "statusUrl": "http://192.168.0.152/gpio77/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht78",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio78/on/",
+            "offUrl": "http://192.168.0.152/gpio78/off/",
+            "statusUrl": "http://192.168.0.152/gpio78/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht79",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio79/on/",
+            "offUrl": "http://192.168.0.152/gpio79/off/",
+            "statusUrl": "http://192.168.0.152/gpio79/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht80",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio80/on/",
+            "offUrl": "http://192.168.0.152/gpio80/off/",
+            "statusUrl": "http://192.168.0.152/gpio80/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht81",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio81/on/",
+            "offUrl": "http://192.168.0.152/gpio81/off/",
+            "statusUrl": "http://192.168.0.152/gpio81/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht82",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio82/on/",
+            "offUrl": "http://192.168.0.152/gpio82/off/",
+            "statusUrl": "http://192.168.0.152/gpio82/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht83",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio83/on/",
+            "offUrl": "http://192.168.0.152/gpio83/off/",
+            "statusUrl": "http://192.168.0.152/gpio83/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht84",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio84/on/",
+            "offUrl": "http://192.168.0.152/gpio84/off/",
+            "statusUrl": "http://192.168.0.152/gpio84/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht85",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio85/on/",
+            "offUrl": "http://192.168.0.152/gpio85/off/",
+            "statusUrl": "http://192.168.0.152/gpio85/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht86",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio86/on/",
+            "offUrl": "http://192.168.0.152/gpio86/off/",
+            "statusUrl": "http://192.168.0.152/gpio86/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht87",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio87/on/",
+            "offUrl": "http://192.168.0.152/gpio87/off/",
+            "statusUrl": "http://192.168.0.152/gpio87/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht88",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio88/on/",
+            "offUrl": "http://192.168.0.152/gpio88/off/",
+            "statusUrl": "http://192.168.0.152/gpio88/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht89",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio89/on/",
+            "offUrl": "http://192.168.0.152/gpio89/off/",
+            "statusUrl": "http://192.168.0.152/gpio89/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht90",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio90/on/",
+            "offUrl": "http://192.168.0.152/gpio90/off/",
+            "statusUrl": "http://192.168.0.152/gpio90/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht91",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio91/on/",
+            "offUrl": "http://192.168.0.152/gpio91/off/",
+            "statusUrl": "http://192.168.0.152/gpio91/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht92",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio92/on/",
+            "offUrl": "http://192.168.0.152/gpio92/off/",
+            "statusUrl": "http://192.168.0.152/gpio92/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht93",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio93/on/",
+            "offUrl": "http://192.168.0.152/gpio93/off/",
+            "statusUrl": "http://192.168.0.152/gpio93/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht94",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio94/on/",
+            "offUrl": "http://192.168.0.152/gpio94/off/",
+            "statusUrl": "http://192.168.0.152/gpio94/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht95",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio95/on/",
+            "offUrl": "http://192.168.0.152/gpio95/off/",
+            "statusUrl": "http://192.168.0.152/gpio95/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht96",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio96/on/",
+            "offUrl": "http://192.168.0.152/gpio96/off/",
+            "statusUrl": "http://192.168.0.152/gpio96/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht97",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio97/on/",
+            "offUrl": "http://192.168.0.152/gpio97/off/",
+            "statusUrl": "http://192.168.0.152/gpio97/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht98",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio98/on/",
+            "offUrl": "http://192.168.0.152/gpio98/off/",
+            "statusUrl": "http://192.168.0.152/gpio98/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht99",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio99/on/",
+            "offUrl": "http://192.168.0.152/gpio99/off/",
+            "statusUrl": "http://192.168.0.152/gpio99/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht100",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio100/on/",
+            "offUrl": "http://192.168.0.152/gpio100/off/",
+            "statusUrl": "http://192.168.0.152/gpio100/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht101",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio101/on/",
+            "offUrl": "http://192.168.0.152/gpio101/off/",
+            "statusUrl": "http://192.168.0.152/gpio101/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht102",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio102/on/",
+            "offUrl": "http://192.168.0.152/gpio102/off/",
+            "statusUrl": "http://192.168.0.152/gpio102/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht103",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio103/on/",
+            "offUrl": "http://192.168.0.152/gpio103/off/",
+            "statusUrl": "http://192.168.0.152/gpio103/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht104",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio104/on/",
+            "offUrl": "http://192.168.0.152/gpio104/off/",
+            "statusUrl": "http://192.168.0.152/gpio104/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht105",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio105/on/",
+            "offUrl": "http://192.168.0.152/gpio105/off/",
+            "statusUrl": "http://192.168.0.152/gpio105/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht106",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio106/on/",
+            "offUrl": "http://192.168.0.152/gpio106/off/",
+            "statusUrl": "http://192.168.0.152/gpio106/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht107",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio107/on/",
+            "offUrl": "http://192.168.0.152/gpio107/off/",
+            "statusUrl": "http://192.168.0.152/gpio107/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht108",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio108/on/",
+            "offUrl": "http://192.168.0.152/gpio108/off/",
+            "statusUrl": "http://192.168.0.152/gpio108/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht109",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio109/on/",
+            "offUrl": "http://192.168.0.152/gpio109/off/",
+            "statusUrl": "http://192.168.0.152/gpio109/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht110",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio110/on/",
+            "offUrl": "http://192.168.0.152/gpio110/off/",
+            "statusUrl": "http://192.168.0.152/gpio110/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht111",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio111/on/",
+            "offUrl": "http://192.168.0.152/gpio111/off/",
+            "statusUrl": "http://192.168.0.152/gpio111/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht112",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio112/on/",
+            "offUrl": "http://192.168.0.152/gpio112/off/",
+            "statusUrl": "http://192.168.0.152/gpio112/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht113",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio113/on/",
+            "offUrl": "http://192.168.0.152/gpio113/off/",
+            "statusUrl": "http://192.168.0.152/gpio113/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht114",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio114/on/",
+            "offUrl": "http://192.168.0.152/gpio114/off/",
+            "statusUrl": "http://192.168.0.152/gpio114/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht115",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio115/on/",
+            "offUrl": "http://192.168.0.152/gpio115/off/",
+            "statusUrl": "http://192.168.0.152/gpio115/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht116",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio116/on/",
+            "offUrl": "http://192.168.0.152/gpio116/off/",
+            "statusUrl": "http://192.168.0.152/gpio116/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht117",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio117/on/",
+            "offUrl": "http://192.168.0.152/gpio117/off/",
+            "statusUrl": "http://192.168.0.152/gpio117/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht118",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio118/on/",
+            "offUrl": "http://192.168.0.152/gpio118/off/",
+            "statusUrl": "http://192.168.0.152/gpio118/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht119",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio119/on/",
+            "offUrl": "http://192.168.0.152/gpio119/off/",
+            "statusUrl": "http://192.168.0.152/gpio119/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht120",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio120/on/",
+            "offUrl": "http://192.168.0.152/gpio120/off/",
+            "statusUrl": "http://192.168.0.152/gpio120/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht121",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio121/on/",
+            "offUrl": "http://192.168.0.152/gpio121/off/",
+            "statusUrl": "http://192.168.0.152/gpio121/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht122",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio122/on/",
+            "offUrl": "http://192.168.0.152/gpio122/off/",
+            "statusUrl": "http://192.168.0.152/gpio122/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht123",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio123/on/",
+            "offUrl": "http://192.168.0.152/gpio123/off/",
+            "statusUrl": "http://192.168.0.152/gpio123/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht124",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio124/on/",
+            "offUrl": "http://192.168.0.152/gpio124/off/",
+            "statusUrl": "http://192.168.0.152/gpio124/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht125",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio125/on/",
+            "offUrl": "http://192.168.0.152/gpio125/off/",
+            "statusUrl": "http://192.168.0.152/gpio125/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht126",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio126/on/",
+            "offUrl": "http://192.168.0.152/gpio126/off/",
+            "statusUrl": "http://192.168.0.152/gpio126/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht127",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio127/on/",
+            "offUrl": "http://192.168.0.152/gpio127/off/",
+            "statusUrl": "http://192.168.0.152/gpio127/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht128",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio128/on/",
+            "offUrl": "http://192.168.0.152/gpio128/off/",
+            "statusUrl": "http://192.168.0.152/gpio128/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht129",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio129/on/",
+            "offUrl": "http://192.168.0.152/gpio129/off/",
+            "statusUrl": "http://192.168.0.152/gpio129/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht130",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio130/on/",
+            "offUrl": "http://192.168.0.152/gpio130/off/",
+            "statusUrl": "http://192.168.0.152/gpio130/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht131",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio131/on/",
+            "offUrl": "http://192.168.0.152/gpio131/off/",
+            "statusUrl": "http://192.168.0.152/gpio131/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht132",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio132/on/",
+            "offUrl": "http://192.168.0.152/gpio132/off/",
+            "statusUrl": "http://192.168.0.152/gpio132/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht133",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio133/on/",
+            "offUrl": "http://192.168.0.152/gpio133/off/",
+            "statusUrl": "http://192.168.0.152/gpio133/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht134",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio134/on/",
+            "offUrl": "http://192.168.0.152/gpio134/off/",
+            "statusUrl": "http://192.168.0.152/gpio134/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht135",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio135/on/",
+            "offUrl": "http://192.168.0.152/gpio135/off/",
+            "statusUrl": "http://192.168.0.152/gpio135/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht136",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio136/on/",
+            "offUrl": "http://192.168.0.152/gpio136/off/",
+            "statusUrl": "http://192.168.0.152/gpio136/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht137",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio137/on/",
+            "offUrl": "http://192.168.0.152/gpio137/off/",
+            "statusUrl": "http://192.168.0.152/gpio137/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht138",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio138/on/",
+            "offUrl": "http://192.168.0.152/gpio138/off/",
+            "statusUrl": "http://192.168.0.152/gpio138/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht139",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio139/on/",
+            "offUrl": "http://192.168.0.152/gpio139/off/",
+            "statusUrl": "http://192.168.0.152/gpio139/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht140",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio140/on/",
+            "offUrl": "http://192.168.0.152/gpio140/off/",
+            "statusUrl": "http://192.168.0.152/gpio140/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht141",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio141/on/",
+            "offUrl": "http://192.168.0.152/gpio141/off/",
+            "statusUrl": "http://192.168.0.152/gpio141/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht142",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio142/on/",
+            "offUrl": "http://192.168.0.152/gpio142/off/",
+            "statusUrl": "http://192.168.0.152/gpio142/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht143",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio143/on/",
+            "offUrl": "http://192.168.0.152/gpio143/off/",
+            "statusUrl": "http://192.168.0.152/gpio143/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht144",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio144/on/",
+            "offUrl": "http://192.168.0.152/gpio144/off/",
+            "statusUrl": "http://192.168.0.152/gpio144/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht145",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio145/on/",
+            "offUrl": "http://192.168.0.152/gpio145/off/",
+            "statusUrl": "http://192.168.0.152/gpio145/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht146",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio146/on/",
+            "offUrl": "http://192.168.0.152/gpio146/off/",
+            "statusUrl": "http://192.168.0.152/gpio146/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht147",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio147/on/",
+            "offUrl": "http://192.168.0.152/gpio147/off/",
+            "statusUrl": "http://192.168.0.152/gpio147/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht148",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio148/on/",
+            "offUrl": "http://192.168.0.152/gpio148/off/",
+            "statusUrl": "http://192.168.0.152/gpio148/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht149",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio149/on/",
+            "offUrl": "http://192.168.0.152/gpio149/off/",
+            "statusUrl": "http://192.168.0.152/gpio149/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht150",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio150/on/",
+            "offUrl": "http://192.168.0.152/gpio150/off/",
+            "statusUrl": "http://192.168.0.152/gpio150/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht151",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio151/on/",
+            "offUrl": "http://192.168.0.152/gpio151/off/",
+            "statusUrl": "http://192.168.0.152/gpio151/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht152",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio152/on/",
+            "offUrl": "http://192.168.0.152/gpio152/off/",
+            "statusUrl": "http://192.168.0.152/gpio152/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht153",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio153/on/",
+            "offUrl": "http://192.168.0.152/gpio153/off/",
+            "statusUrl": "http://192.168.0.152/gpio153/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht154",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio154/on/",
+            "offUrl": "http://192.168.0.152/gpio154/off/",
+            "statusUrl": "http://192.168.0.152/gpio154/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht155",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio155/on/",
+            "offUrl": "http://192.168.0.152/gpio155/off/",
+            "statusUrl": "http://192.168.0.152/gpio155/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht156",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio156/on/",
+            "offUrl": "http://192.168.0.152/gpio156/off/",
+            "statusUrl": "http://192.168.0.152/gpio156/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht157",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio157/on/",
+            "offUrl": "http://192.168.0.152/gpio157/off/",
+            "statusUrl": "http://192.168.0.152/gpio157/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht158",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio158/on/",
+            "offUrl": "http://192.168.0.152/gpio158/off/",
+            "statusUrl": "http://192.168.0.152/gpio158/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht159",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio159/on/",
+            "offUrl": "http://192.168.0.152/gpio159/off/",
+            "statusUrl": "http://192.168.0.152/gpio159/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht160",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio160/on/",
+            "offUrl": "http://192.168.0.152/gpio160/off/",
+            "statusUrl": "http://192.168.0.152/gpio160/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht161",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio161/on/",
+            "offUrl": "http://192.168.0.152/gpio161/off/",
+            "statusUrl": "http://192.168.0.152/gpio161/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht162",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio162/on/",
+            "offUrl": "http://192.168.0.152/gpio162/off/",
+            "statusUrl": "http://192.168.0.152/gpio162/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht163",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio163/on/",
+            "offUrl": "http://192.168.0.152/gpio163/off/",
+            "statusUrl": "http://192.168.0.152/gpio163/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht164",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio164/on/",
+            "offUrl": "http://192.168.0.152/gpio164/off/",
+            "statusUrl": "http://192.168.0.152/gpio164/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht165",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio165/on/",
+            "offUrl": "http://192.168.0.152/gpio165/off/",
+            "statusUrl": "http://192.168.0.152/gpio165/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht166",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio166/on/",
+            "offUrl": "http://192.168.0.152/gpio166/off/",
+            "statusUrl": "http://192.168.0.152/gpio166/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht167",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio167/on/",
+            "offUrl": "http://192.168.0.152/gpio167/off/",
+            "statusUrl": "http://192.168.0.152/gpio167/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht168",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio168/on/",
+            "offUrl": "http://192.168.0.152/gpio168/off/",
+            "statusUrl": "http://192.168.0.152/gpio168/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht169",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio169/on/",
+            "offUrl": "http://192.168.0.152/gpio169/off/",
+            "statusUrl": "http://192.168.0.152/gpio169/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht170",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio170/on/",
+            "offUrl": "http://192.168.0.152/gpio170/off/",
+            "statusUrl": "http://192.168.0.152/gpio170/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht171",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio171/on/",
+            "offUrl": "http://192.168.0.152/gpio171/off/",
+            "statusUrl": "http://192.168.0.152/gpio171/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht172",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio172/on/",
+            "offUrl": "http://192.168.0.152/gpio172/off/",
+            "statusUrl": "http://192.168.0.152/gpio172/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht173",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio173/on/",
+            "offUrl": "http://192.168.0.152/gpio173/off/",
+            "statusUrl": "http://192.168.0.152/gpio173/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht174",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio174/on/",
+            "offUrl": "http://192.168.0.152/gpio174/off/",
+            "statusUrl": "http://192.168.0.152/gpio174/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht175",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio175/on/",
+            "offUrl": "http://192.168.0.152/gpio175/off/",
+            "statusUrl": "http://192.168.0.152/gpio175/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht176",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio176/on/",
+            "offUrl": "http://192.168.0.152/gpio176/off/",
+            "statusUrl": "http://192.168.0.152/gpio176/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht177",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio177/on/",
+            "offUrl": "http://192.168.0.152/gpio177/off/",
+            "statusUrl": "http://192.168.0.152/gpio177/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht178",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio178/on/",
+            "offUrl": "http://192.168.0.152/gpio178/off/",
+            "statusUrl": "http://192.168.0.152/gpio178/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht179",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio179/on/",
+            "offUrl": "http://192.168.0.152/gpio179/off/",
+            "statusUrl": "http://192.168.0.152/gpio179/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht180",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio180/on/",
+            "offUrl": "http://192.168.0.152/gpio180/off/",
+            "statusUrl": "http://192.168.0.152/gpio180/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht181",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio181/on/",
+            "offUrl": "http://192.168.0.152/gpio181/off/",
+            "statusUrl": "http://192.168.0.152/gpio181/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht182",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio182/on/",
+            "offUrl": "http://192.168.0.152/gpio182/off/",
+            "statusUrl": "http://192.168.0.152/gpio182/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht183",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio183/on/",
+            "offUrl": "http://192.168.0.152/gpio183/off/",
+            "statusUrl": "http://192.168.0.152/gpio183/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht184",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio184/on/",
+            "offUrl": "http://192.168.0.152/gpio184/off/",
+            "statusUrl": "http://192.168.0.152/gpio184/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht185",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio185/on/",
+            "offUrl": "http://192.168.0.152/gpio185/off/",
+            "statusUrl": "http://192.168.0.152/gpio185/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht186",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio186/on/",
+            "offUrl": "http://192.168.0.152/gpio186/off/",
+            "statusUrl": "http://192.168.0.152/gpio186/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht187",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio187/on/",
+            "offUrl": "http://192.168.0.152/gpio187/off/",
+            "statusUrl": "http://192.168.0.152/gpio187/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht188",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio188/on/",
+            "offUrl": "http://192.168.0.152/gpio188/off/",
+            "statusUrl": "http://192.168.0.152/gpio188/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht189",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio189/on/",
+            "offUrl": "http://192.168.0.152/gpio189/off/",
+            "statusUrl": "http://192.168.0.152/gpio189/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht190",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio190/on/",
+            "offUrl": "http://192.168.0.152/gpio190/off/",
+            "statusUrl": "http://192.168.0.152/gpio190/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht191",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio191/on/",
+            "offUrl": "http://192.168.0.152/gpio191/off/",
+            "statusUrl": "http://192.168.0.152/gpio191/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht192",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio192/on/",
+            "offUrl": "http://192.168.0.152/gpio192/off/",
+            "statusUrl": "http://192.168.0.152/gpio192/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht193",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio193/on/",
+            "offUrl": "http://192.168.0.152/gpio193/off/",
+            "statusUrl": "http://192.168.0.152/gpio193/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht194",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio194/on/",
+            "offUrl": "http://192.168.0.152/gpio194/off/",
+            "statusUrl": "http://192.168.0.152/gpio194/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht195",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio195/on/",
+            "offUrl": "http://192.168.0.152/gpio195/off/",
+            "statusUrl": "http://192.168.0.152/gpio195/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht196",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio196/on/",
+            "offUrl": "http://192.168.0.152/gpio196/off/",
+            "statusUrl": "http://192.168.0.152/gpio196/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht197",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio197/on/",
+            "offUrl": "http://192.168.0.152/gpio197/off/",
+            "statusUrl": "http://192.168.0.152/gpio197/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht198",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio198/on/",
+            "offUrl": "http://192.168.0.152/gpio198/off/",
+            "statusUrl": "http://192.168.0.152/gpio198/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht199",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio199/on/",
+            "offUrl": "http://192.168.0.152/gpio199/off/",
+            "statusUrl": "http://192.168.0.152/gpio199/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht200",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio200/on/",
+            "offUrl": "http://192.168.0.152/gpio200/off/",
+            "statusUrl": "http://192.168.0.152/gpio200/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht201",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio201/on/",
+            "offUrl": "http://192.168.0.152/gpio201/off/",
+            "statusUrl": "http://192.168.0.152/gpio201/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht202",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio202/on/",
+            "offUrl": "http://192.168.0.152/gpio202/off/",
+            "statusUrl": "http://192.168.0.152/gpio202/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht203",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio203/on/",
+            "offUrl": "http://192.168.0.152/gpio203/off/",
+            "statusUrl": "http://192.168.0.152/gpio203/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht204",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio204/on/",
+            "offUrl": "http://192.168.0.152/gpio204/off/",
+            "statusUrl": "http://192.168.0.152/gpio204/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht205",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio205/on/",
+            "offUrl": "http://192.168.0.152/gpio205/off/",
+            "statusUrl": "http://192.168.0.152/gpio205/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht206",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio206/on/",
+            "offUrl": "http://192.168.0.152/gpio206/off/",
+            "statusUrl": "http://192.168.0.152/gpio206/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht207",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio207/on/",
+            "offUrl": "http://192.168.0.152/gpio207/off/",
+            "statusUrl": "http://192.168.0.152/gpio207/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht208",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio208/on/",
+            "offUrl": "http://192.168.0.152/gpio208/off/",
+            "statusUrl": "http://192.168.0.152/gpio208/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht209",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio209/on/",
+            "offUrl": "http://192.168.0.152/gpio209/off/",
+            "statusUrl": "http://192.168.0.152/gpio209/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht210",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio210/on/",
+            "offUrl": "http://192.168.0.152/gpio210/off/",
+            "statusUrl": "http://192.168.0.152/gpio210/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht211",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio211/on/",
+            "offUrl": "http://192.168.0.152/gpio211/off/",
+            "statusUrl": "http://192.168.0.152/gpio211/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht212",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio212/on/",
+            "offUrl": "http://192.168.0.152/gpio212/off/",
+            "statusUrl": "http://192.168.0.152/gpio212/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht213",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio213/on/",
+            "offUrl": "http://192.168.0.152/gpio213/off/",
+            "statusUrl": "http://192.168.0.152/gpio213/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht214",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio214/on/",
+            "offUrl": "http://192.168.0.152/gpio214/off/",
+            "statusUrl": "http://192.168.0.152/gpio214/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht215",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio215/on/",
+            "offUrl": "http://192.168.0.152/gpio215/off/",
+            "statusUrl": "http://192.168.0.152/gpio215/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht216",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio216/on/",
+            "offUrl": "http://192.168.0.152/gpio216/off/",
+            "statusUrl": "http://192.168.0.152/gpio216/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht217",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio217/on/",
+            "offUrl": "http://192.168.0.152/gpio217/off/",
+            "statusUrl": "http://192.168.0.152/gpio217/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht218",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio218/on/",
+            "offUrl": "http://192.168.0.152/gpio218/off/",
+            "statusUrl": "http://192.168.0.152/gpio218/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht219",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio219/on/",
+            "offUrl": "http://192.168.0.152/gpio219/off/",
+            "statusUrl": "http://192.168.0.152/gpio219/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht220",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio220/on/",
+            "offUrl": "http://192.168.0.152/gpio220/off/",
+            "statusUrl": "http://192.168.0.152/gpio220/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht221",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio221/on/",
+            "offUrl": "http://192.168.0.152/gpio221/off/",
+            "statusUrl": "http://192.168.0.152/gpio221/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht222",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio222/on/",
+            "offUrl": "http://192.168.0.152/gpio222/off/",
+            "statusUrl": "http://192.168.0.152/gpio222/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht223",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio223/on/",
+            "offUrl": "http://192.168.0.152/gpio223/off/",
+            "statusUrl": "http://192.168.0.152/gpio223/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht224",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio224/on/",
+            "offUrl": "http://192.168.0.152/gpio224/off/",
+            "statusUrl": "http://192.168.0.152/gpio224/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht225",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio225/on/",
+            "offUrl": "http://192.168.0.152/gpio225/off/",
+            "statusUrl": "http://192.168.0.152/gpio225/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht226",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio226/on/",
+            "offUrl": "http://192.168.0.152/gpio226/off/",
+            "statusUrl": "http://192.168.0.152/gpio226/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht227",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio227/on/",
+            "offUrl": "http://192.168.0.152/gpio227/off/",
+            "statusUrl": "http://192.168.0.152/gpio227/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht228",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio228/on/",
+            "offUrl": "http://192.168.0.152/gpio228/off/",
+            "statusUrl": "http://192.168.0.152/gpio228/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht229",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio229/on/",
+            "offUrl": "http://192.168.0.152/gpio229/off/",
+            "statusUrl": "http://192.168.0.152/gpio229/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht230",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio230/on/",
+            "offUrl": "http://192.168.0.152/gpio230/off/",
+            "statusUrl": "http://192.168.0.152/gpio230/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht231",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio231/on/",
+            "offUrl": "http://192.168.0.152/gpio231/off/",
+            "statusUrl": "http://192.168.0.152/gpio231/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht232",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio232/on/",
+            "offUrl": "http://192.168.0.152/gpio232/off/",
+            "statusUrl": "http://192.168.0.152/gpio232/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht233",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio233/on/",
+            "offUrl": "http://192.168.0.152/gpio233/off/",
+            "statusUrl": "http://192.168.0.152/gpio233/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht234",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio234/on/",
+            "offUrl": "http://192.168.0.152/gpio234/off/",
+            "statusUrl": "http://192.168.0.152/gpio234/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht235",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio235/on/",
+            "offUrl": "http://192.168.0.152/gpio235/off/",
+            "statusUrl": "http://192.168.0.152/gpio235/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht236",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio236/on/",
+            "offUrl": "http://192.168.0.152/gpio236/off/",
+            "statusUrl": "http://192.168.0.152/gpio236/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht237",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio237/on/",
+            "offUrl": "http://192.168.0.152/gpio237/off/",
+            "statusUrl": "http://192.168.0.152/gpio237/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht238",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio238/on/",
+            "offUrl": "http://192.168.0.152/gpio238/off/",
+            "statusUrl": "http://192.168.0.152/gpio238/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht239",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio239/on/",
+            "offUrl": "http://192.168.0.152/gpio239/off/",
+            "statusUrl": "http://192.168.0.152/gpio239/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht240",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio240/on/",
+            "offUrl": "http://192.168.0.152/gpio240/off/",
+            "statusUrl": "http://192.168.0.152/gpio240/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht241",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio241/on/",
+            "offUrl": "http://192.168.0.152/gpio241/off/",
+            "statusUrl": "http://192.168.0.152/gpio241/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht242",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio242/on/",
+            "offUrl": "http://192.168.0.152/gpio242/off/",
+            "statusUrl": "http://192.168.0.152/gpio242/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht243",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio243/on/",
+            "offUrl": "http://192.168.0.152/gpio243/off/",
+            "statusUrl": "http://192.168.0.152/gpio243/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht244",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio244/on/",
+            "offUrl": "http://192.168.0.152/gpio244/off/",
+            "statusUrl": "http://192.168.0.152/gpio244/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht245",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio245/on/",
+            "offUrl": "http://192.168.0.152/gpio245/off/",
+            "statusUrl": "http://192.168.0.152/gpio245/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht246",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio246/on/",
+            "offUrl": "http://192.168.0.152/gpio246/off/",
+            "statusUrl": "http://192.168.0.152/gpio246/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht247",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio247/on/",
+            "offUrl": "http://192.168.0.152/gpio247/off/",
+            "statusUrl": "http://192.168.0.152/gpio247/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht248",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio248/on/",
+            "offUrl": "http://192.168.0.152/gpio248/off/",
+            "statusUrl": "http://192.168.0.152/gpio248/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht249",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio249/on/",
+            "offUrl": "http://192.168.0.152/gpio249/off/",
+            "statusUrl": "http://192.168.0.152/gpio249/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht250",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio250/on/",
+            "offUrl": "http://192.168.0.152/gpio250/off/",
+            "statusUrl": "http://192.168.0.152/gpio250/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht251",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio251/on/",
+            "offUrl": "http://192.168.0.152/gpio251/off/",
+            "statusUrl": "http://192.168.0.152/gpio251/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht252",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio252/on/",
+            "offUrl": "http://192.168.0.152/gpio252/off/",
+            "statusUrl": "http://192.168.0.152/gpio252/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht253",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio253/on/",
+            "offUrl": "http://192.168.0.152/gpio253/off/",
+            "statusUrl": "http://192.168.0.152/gpio253/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht254",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio254/on/",
+            "offUrl": "http://192.168.0.152/gpio254/off/",
+            "statusUrl": "http://192.168.0.152/gpio254/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht255",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio255/on/",
+            "offUrl": "http://192.168.0.152/gpio255/off/",
+            "statusUrl": "http://192.168.0.152/gpio255/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht256",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio256/on/",
+            "offUrl": "http://192.168.0.152/gpio256/off/",
+            "statusUrl": "http://192.168.0.152/gpio256/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht257",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio257/on/",
+            "offUrl": "http://192.168.0.152/gpio257/off/",
+            "statusUrl": "http://192.168.0.152/gpio257/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht258",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio258/on/",
+            "offUrl": "http://192.168.0.152/gpio258/off/",
+            "statusUrl": "http://192.168.0.152/gpio258/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht259",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio259/on/",
+            "offUrl": "http://192.168.0.152/gpio259/off/",
+            "statusUrl": "http://192.168.0.152/gpio259/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht260",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio260/on/",
+            "offUrl": "http://192.168.0.152/gpio260/off/",
+            "statusUrl": "http://192.168.0.152/gpio260/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht261",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio261/on/",
+            "offUrl": "http://192.168.0.152/gpio261/off/",
+            "statusUrl": "http://192.168.0.152/gpio261/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht262",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio262/on/",
+            "offUrl": "http://192.168.0.152/gpio262/off/",
+            "statusUrl": "http://192.168.0.152/gpio262/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht263",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio263/on/",
+            "offUrl": "http://192.168.0.152/gpio263/off/",
+            "statusUrl": "http://192.168.0.152/gpio263/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht264",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio264/on/",
+            "offUrl": "http://192.168.0.152/gpio264/off/",
+            "statusUrl": "http://192.168.0.152/gpio264/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht265",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio265/on/",
+            "offUrl": "http://192.168.0.152/gpio265/off/",
+            "statusUrl": "http://192.168.0.152/gpio265/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht266",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio266/on/",
+            "offUrl": "http://192.168.0.152/gpio266/off/",
+            "statusUrl": "http://192.168.0.152/gpio266/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht267",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio267/on/",
+            "offUrl": "http://192.168.0.152/gpio267/off/",
+            "statusUrl": "http://192.168.0.152/gpio267/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht268",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio268/on/",
+            "offUrl": "http://192.168.0.152/gpio268/off/",
+            "statusUrl": "http://192.168.0.152/gpio268/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht269",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio269/on/",
+            "offUrl": "http://192.168.0.152/gpio269/off/",
+            "statusUrl": "http://192.168.0.152/gpio269/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht270",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio270/on/",
+            "offUrl": "http://192.168.0.152/gpio270/off/",
+            "statusUrl": "http://192.168.0.152/gpio270/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht271",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio271/on/",
+            "offUrl": "http://192.168.0.152/gpio271/off/",
+            "statusUrl": "http://192.168.0.152/gpio271/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht272",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio272/on/",
+            "offUrl": "http://192.168.0.152/gpio272/off/",
+            "statusUrl": "http://192.168.0.152/gpio272/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht273",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio273/on/",
+            "offUrl": "http://192.168.0.152/gpio273/off/",
+            "statusUrl": "http://192.168.0.152/gpio273/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht274",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio274/on/",
+            "offUrl": "http://192.168.0.152/gpio274/off/",
+            "statusUrl": "http://192.168.0.152/gpio274/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht275",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio275/on/",
+            "offUrl": "http://192.168.0.152/gpio275/off/",
+            "statusUrl": "http://192.168.0.152/gpio275/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht276",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio276/on/",
+            "offUrl": "http://192.168.0.152/gpio276/off/",
+            "statusUrl": "http://192.168.0.152/gpio276/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht277",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio277/on/",
+            "offUrl": "http://192.168.0.152/gpio277/off/",
+            "statusUrl": "http://192.168.0.152/gpio277/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht278",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio278/on/",
+            "offUrl": "http://192.168.0.152/gpio278/off/",
+            "statusUrl": "http://192.168.0.152/gpio278/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht279",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio279/on/",
+            "offUrl": "http://192.168.0.152/gpio279/off/",
+            "statusUrl": "http://192.168.0.152/gpio279/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht280",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio280/on/",
+            "offUrl": "http://192.168.0.152/gpio280/off/",
+            "statusUrl": "http://192.168.0.152/gpio280/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht281",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio281/on/",
+            "offUrl": "http://192.168.0.152/gpio281/off/",
+            "statusUrl": "http://192.168.0.152/gpio281/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht282",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio282/on/",
+            "offUrl": "http://192.168.0.152/gpio282/off/",
+            "statusUrl": "http://192.168.0.152/gpio282/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht283",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio283/on/",
+            "offUrl": "http://192.168.0.152/gpio283/off/",
+            "statusUrl": "http://192.168.0.152/gpio283/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht284",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio284/on/",
+            "offUrl": "http://192.168.0.152/gpio284/off/",
+            "statusUrl": "http://192.168.0.152/gpio284/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht285",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio285/on/",
+            "offUrl": "http://192.168.0.152/gpio285/off/",
+            "statusUrl": "http://192.168.0.152/gpio285/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht286",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio286/on/",
+            "offUrl": "http://192.168.0.152/gpio286/off/",
+            "statusUrl": "http://192.168.0.152/gpio286/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht287",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio287/on/",
+            "offUrl": "http://192.168.0.152/gpio287/off/",
+            "statusUrl": "http://192.168.0.152/gpio287/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht288",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio288/on/",
+            "offUrl": "http://192.168.0.152/gpio288/off/",
+            "statusUrl": "http://192.168.0.152/gpio288/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht289",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio289/on/",
+            "offUrl": "http://192.168.0.152/gpio289/off/",
+            "statusUrl": "http://192.168.0.152/gpio289/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht290",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio290/on/",
+            "offUrl": "http://192.168.0.152/gpio290/off/",
+            "statusUrl": "http://192.168.0.152/gpio290/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht291",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio291/on/",
+            "offUrl": "http://192.168.0.152/gpio291/off/",
+            "statusUrl": "http://192.168.0.152/gpio291/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht292",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio292/on/",
+            "offUrl": "http://192.168.0.152/gpio292/off/",
+            "statusUrl": "http://192.168.0.152/gpio292/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht293",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio293/on/",
+            "offUrl": "http://192.168.0.152/gpio293/off/",
+            "statusUrl": "http://192.168.0.152/gpio293/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht294",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio294/on/",
+            "offUrl": "http://192.168.0.152/gpio294/off/",
+            "statusUrl": "http://192.168.0.152/gpio294/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht295",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio295/on/",
+            "offUrl": "http://192.168.0.152/gpio295/off/",
+            "statusUrl": "http://192.168.0.152/gpio295/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht296",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio296/on/",
+            "offUrl": "http://192.168.0.152/gpio296/off/",
+            "statusUrl": "http://192.168.0.152/gpio296/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht297",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio297/on/",
+            "offUrl": "http://192.168.0.152/gpio297/off/",
+            "statusUrl": "http://192.168.0.152/gpio297/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht298",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio298/on/",
+            "offUrl": "http://192.168.0.152/gpio298/off/",
+            "statusUrl": "http://192.168.0.152/gpio298/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht299",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio299/on/",
+            "offUrl": "http://192.168.0.152/gpio299/off/",
+            "statusUrl": "http://192.168.0.152/gpio299/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht300",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio300/on/",
+            "offUrl": "http://192.168.0.152/gpio300/off/",
+            "statusUrl": "http://192.168.0.152/gpio300/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht301",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio301/on/",
+            "offUrl": "http://192.168.0.152/gpio301/off/",
+            "statusUrl": "http://192.168.0.152/gpio301/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht302",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio302/on/",
+            "offUrl": "http://192.168.0.152/gpio302/off/",
+            "statusUrl": "http://192.168.0.152/gpio302/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht303",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio303/on/",
+            "offUrl": "http://192.168.0.152/gpio303/off/",
+            "statusUrl": "http://192.168.0.152/gpio303/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht304",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio304/on/",
+            "offUrl": "http://192.168.0.152/gpio304/off/",
+            "statusUrl": "http://192.168.0.152/gpio304/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht305",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio305/on/",
+            "offUrl": "http://192.168.0.152/gpio305/off/",
+            "statusUrl": "http://192.168.0.152/gpio305/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht306",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio306/on/",
+            "offUrl": "http://192.168.0.152/gpio306/off/",
+            "statusUrl": "http://192.168.0.152/gpio306/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht307",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio307/on/",
+            "offUrl": "http://192.168.0.152/gpio307/off/",
+            "statusUrl": "http://192.168.0.152/gpio307/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht308",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio308/on/",
+            "offUrl": "http://192.168.0.152/gpio308/off/",
+            "statusUrl": "http://192.168.0.152/gpio308/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht309",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio309/on/",
+            "offUrl": "http://192.168.0.152/gpio309/off/",
+            "statusUrl": "http://192.168.0.152/gpio309/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht310",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio310/on/",
+            "offUrl": "http://192.168.0.152/gpio310/off/",
+            "statusUrl": "http://192.168.0.152/gpio310/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht311",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio311/on/",
+            "offUrl": "http://192.168.0.152/gpio311/off/",
+            "statusUrl": "http://192.168.0.152/gpio311/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht312",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio312/on/",
+            "offUrl": "http://192.168.0.152/gpio312/off/",
+            "statusUrl": "http://192.168.0.152/gpio312/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht313",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio313/on/",
+            "offUrl": "http://192.168.0.152/gpio313/off/",
+            "statusUrl": "http://192.168.0.152/gpio313/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht314",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio314/on/",
+            "offUrl": "http://192.168.0.152/gpio314/off/",
+            "statusUrl": "http://192.168.0.152/gpio314/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht315",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio315/on/",
+            "offUrl": "http://192.168.0.152/gpio315/off/",
+            "statusUrl": "http://192.168.0.152/gpio315/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht316",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio316/on/",
+            "offUrl": "http://192.168.0.152/gpio316/off/",
+            "statusUrl": "http://192.168.0.152/gpio316/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht317",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio317/on/",
+            "offUrl": "http://192.168.0.152/gpio317/off/",
+            "statusUrl": "http://192.168.0.152/gpio317/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht318",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio318/on/",
+            "offUrl": "http://192.168.0.152/gpio318/off/",
+            "statusUrl": "http://192.168.0.152/gpio318/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht319",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio319/on/",
+            "offUrl": "http://192.168.0.152/gpio319/off/",
+            "statusUrl": "http://192.168.0.152/gpio319/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht320",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio320/on/",
+            "offUrl": "http://192.168.0.152/gpio320/off/",
+            "statusUrl": "http://192.168.0.152/gpio320/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht321",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio321/on/",
+            "offUrl": "http://192.168.0.152/gpio321/off/",
+            "statusUrl": "http://192.168.0.152/gpio321/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht322",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio322/on/",
+            "offUrl": "http://192.168.0.152/gpio322/off/",
+            "statusUrl": "http://192.168.0.152/gpio322/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht323",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio323/on/",
+            "offUrl": "http://192.168.0.152/gpio323/off/",
+            "statusUrl": "http://192.168.0.152/gpio323/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht324",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio324/on/",
+            "offUrl": "http://192.168.0.152/gpio324/off/",
+            "statusUrl": "http://192.168.0.152/gpio324/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht325",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio325/on/",
+            "offUrl": "http://192.168.0.152/gpio325/off/",
+            "statusUrl": "http://192.168.0.152/gpio325/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht326",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio326/on/",
+            "offUrl": "http://192.168.0.152/gpio326/off/",
+            "statusUrl": "http://192.168.0.152/gpio326/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht327",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio327/on/",
+            "offUrl": "http://192.168.0.152/gpio327/off/",
+            "statusUrl": "http://192.168.0.152/gpio327/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht328",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio328/on/",
+            "offUrl": "http://192.168.0.152/gpio328/off/",
+            "statusUrl": "http://192.168.0.152/gpio328/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht329",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio329/on/",
+            "offUrl": "http://192.168.0.152/gpio329/off/",
+            "statusUrl": "http://192.168.0.152/gpio329/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht330",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio330/on/",
+            "offUrl": "http://192.168.0.152/gpio330/off/",
+            "statusUrl": "http://192.168.0.152/gpio330/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht331",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio331/on/",
+            "offUrl": "http://192.168.0.152/gpio331/off/",
+            "statusUrl": "http://192.168.0.152/gpio331/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht332",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio332/on/",
+            "offUrl": "http://192.168.0.152/gpio332/off/",
+            "statusUrl": "http://192.168.0.152/gpio332/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht333",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio333/on/",
+            "offUrl": "http://192.168.0.152/gpio333/off/",
+            "statusUrl": "http://192.168.0.152/gpio333/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht334",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio334/on/",
+            "offUrl": "http://192.168.0.152/gpio334/off/",
+            "statusUrl": "http://192.168.0.152/gpio334/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht335",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio335/on/",
+            "offUrl": "http://192.168.0.152/gpio335/off/",
+            "statusUrl": "http://192.168.0.152/gpio335/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht336",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio336/on/",
+            "offUrl": "http://192.168.0.152/gpio336/off/",
+            "statusUrl": "http://192.168.0.152/gpio336/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht337",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio337/on/",
+            "offUrl": "http://192.168.0.152/gpio337/off/",
+            "statusUrl": "http://192.168.0.152/gpio337/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht338",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio338/on/",
+            "offUrl": "http://192.168.0.152/gpio338/off/",
+            "statusUrl": "http://192.168.0.152/gpio338/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht339",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio339/on/",
+            "offUrl": "http://192.168.0.152/gpio339/off/",
+            "statusUrl": "http://192.168.0.152/gpio339/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht340",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio340/on/",
+            "offUrl": "http://192.168.0.152/gpio340/off/",
+            "statusUrl": "http://192.168.0.152/gpio340/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht341",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio341/on/",
+            "offUrl": "http://192.168.0.152/gpio341/off/",
+            "statusUrl": "http://192.168.0.152/gpio341/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht342",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio342/on/",
+            "offUrl": "http://192.168.0.152/gpio342/off/",
+            "statusUrl": "http://192.168.0.152/gpio342/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht343",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio343/on/",
+            "offUrl": "http://192.168.0.152/gpio343/off/",
+            "statusUrl": "http://192.168.0.152/gpio343/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht344",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio344/on/",
+            "offUrl": "http://192.168.0.152/gpio344/off/",
+            "statusUrl": "http://192.168.0.152/gpio344/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht345",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio345/on/",
+            "offUrl": "http://192.168.0.152/gpio345/off/",
+            "statusUrl": "http://192.168.0.152/gpio345/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht346",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio346/on/",
+            "offUrl": "http://192.168.0.152/gpio346/off/",
+            "statusUrl": "http://192.168.0.152/gpio346/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht347",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio347/on/",
+            "offUrl": "http://192.168.0.152/gpio347/off/",
+            "statusUrl": "http://192.168.0.152/gpio347/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht348",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio348/on/",
+            "offUrl": "http://192.168.0.152/gpio348/off/",
+            "statusUrl": "http://192.168.0.152/gpio348/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht349",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio349/on/",
+            "offUrl": "http://192.168.0.152/gpio349/off/",
+            "statusUrl": "http://192.168.0.152/gpio349/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht350",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio350/on/",
+            "offUrl": "http://192.168.0.152/gpio350/off/",
+            "statusUrl": "http://192.168.0.152/gpio350/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht351",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio351/on/",
+            "offUrl": "http://192.168.0.152/gpio351/off/",
+            "statusUrl": "http://192.168.0.152/gpio351/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht352",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio352/on/",
+            "offUrl": "http://192.168.0.152/gpio352/off/",
+            "statusUrl": "http://192.168.0.152/gpio352/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht353",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio353/on/",
+            "offUrl": "http://192.168.0.152/gpio353/off/",
+            "statusUrl": "http://192.168.0.152/gpio353/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht354",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio354/on/",
+            "offUrl": "http://192.168.0.152/gpio354/off/",
+            "statusUrl": "http://192.168.0.152/gpio354/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht355",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio355/on/",
+            "offUrl": "http://192.168.0.152/gpio355/off/",
+            "statusUrl": "http://192.168.0.152/gpio355/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht356",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio356/on/",
+            "offUrl": "http://192.168.0.152/gpio356/off/",
+            "statusUrl": "http://192.168.0.152/gpio356/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht357",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio357/on/",
+            "offUrl": "http://192.168.0.152/gpio357/off/",
+            "statusUrl": "http://192.168.0.152/gpio357/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht358",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio358/on/",
+            "offUrl": "http://192.168.0.152/gpio358/off/",
+            "statusUrl": "http://192.168.0.152/gpio358/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht359",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio359/on/",
+            "offUrl": "http://192.168.0.152/gpio359/off/",
+            "statusUrl": "http://192.168.0.152/gpio359/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht360",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio360/on/",
+            "offUrl": "http://192.168.0.152/gpio360/off/",
+            "statusUrl": "http://192.168.0.152/gpio360/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht361",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio361/on/",
+            "offUrl": "http://192.168.0.152/gpio361/off/",
+            "statusUrl": "http://192.168.0.152/gpio361/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht362",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio362/on/",
+            "offUrl": "http://192.168.0.152/gpio362/off/",
+            "statusUrl": "http://192.168.0.152/gpio362/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht363",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio363/on/",
+            "offUrl": "http://192.168.0.152/gpio363/off/",
+            "statusUrl": "http://192.168.0.152/gpio363/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht364",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio364/on/",
+            "offUrl": "http://192.168.0.152/gpio364/off/",
+            "statusUrl": "http://192.168.0.152/gpio364/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht365",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio365/on/",
+            "offUrl": "http://192.168.0.152/gpio365/off/",
+            "statusUrl": "http://192.168.0.152/gpio365/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht366",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio366/on/",
+            "offUrl": "http://192.168.0.152/gpio366/off/",
+            "statusUrl": "http://192.168.0.152/gpio366/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht367",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio367/on/",
+            "offUrl": "http://192.168.0.152/gpio367/off/",
+            "statusUrl": "http://192.168.0.152/gpio367/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht368",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio368/on/",
+            "offUrl": "http://192.168.0.152/gpio368/off/",
+            "statusUrl": "http://192.168.0.152/gpio368/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht369",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio369/on/",
+            "offUrl": "http://192.168.0.152/gpio369/off/",
+            "statusUrl": "http://192.168.0.152/gpio369/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht370",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio370/on/",
+            "offUrl": "http://192.168.0.152/gpio370/off/",
+            "statusUrl": "http://192.168.0.152/gpio370/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht371",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio371/on/",
+            "offUrl": "http://192.168.0.152/gpio371/off/",
+            "statusUrl": "http://192.168.0.152/gpio371/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht372",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio372/on/",
+            "offUrl": "http://192.168.0.152/gpio372/off/",
+            "statusUrl": "http://192.168.0.152/gpio372/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht373",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio373/on/",
+            "offUrl": "http://192.168.0.152/gpio373/off/",
+            "statusUrl": "http://192.168.0.152/gpio373/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht374",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio374/on/",
+            "offUrl": "http://192.168.0.152/gpio374/off/",
+            "statusUrl": "http://192.168.0.152/gpio374/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht375",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio375/on/",
+            "offUrl": "http://192.168.0.152/gpio375/off/",
+            "statusUrl": "http://192.168.0.152/gpio375/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht376",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio376/on/",
+            "offUrl": "http://192.168.0.152/gpio376/off/",
+            "statusUrl": "http://192.168.0.152/gpio376/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht377",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio377/on/",
+            "offUrl": "http://192.168.0.152/gpio377/off/",
+            "statusUrl": "http://192.168.0.152/gpio377/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht378",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio378/on/",
+            "offUrl": "http://192.168.0.152/gpio378/off/",
+            "statusUrl": "http://192.168.0.152/gpio378/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht379",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio379/on/",
+            "offUrl": "http://192.168.0.152/gpio379/off/",
+            "statusUrl": "http://192.168.0.152/gpio379/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht380",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio380/on/",
+            "offUrl": "http://192.168.0.152/gpio380/off/",
+            "statusUrl": "http://192.168.0.152/gpio380/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht381",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio381/on/",
+            "offUrl": "http://192.168.0.152/gpio381/off/",
+            "statusUrl": "http://192.168.0.152/gpio381/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht382",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio382/on/",
+            "offUrl": "http://192.168.0.152/gpio382/off/",
+            "statusUrl": "http://192.168.0.152/gpio382/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht383",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio383/on/",
+            "offUrl": "http://192.168.0.152/gpio383/off/",
+            "statusUrl": "http://192.168.0.152/gpio383/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht384",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio384/on/",
+            "offUrl": "http://192.168.0.152/gpio384/off/",
+            "statusUrl": "http://192.168.0.152/gpio384/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht385",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio385/on/",
+            "offUrl": "http://192.168.0.152/gpio385/off/",
+            "statusUrl": "http://192.168.0.152/gpio385/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht386",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio386/on/",
+            "offUrl": "http://192.168.0.152/gpio386/off/",
+            "statusUrl": "http://192.168.0.152/gpio386/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht387",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio387/on/",
+            "offUrl": "http://192.168.0.152/gpio387/off/",
+            "statusUrl": "http://192.168.0.152/gpio387/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht388",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio388/on/",
+            "offUrl": "http://192.168.0.152/gpio388/off/",
+            "statusUrl": "http://192.168.0.152/gpio388/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht389",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio389/on/",
+            "offUrl": "http://192.168.0.152/gpio389/off/",
+            "statusUrl": "http://192.168.0.152/gpio389/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht390",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio390/on/",
+            "offUrl": "http://192.168.0.152/gpio390/off/",
+            "statusUrl": "http://192.168.0.152/gpio390/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht391",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio391/on/",
+            "offUrl": "http://192.168.0.152/gpio391/off/",
+            "statusUrl": "http://192.168.0.152/gpio391/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht392",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio392/on/",
+            "offUrl": "http://192.168.0.152/gpio392/off/",
+            "statusUrl": "http://192.168.0.152/gpio392/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht393",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio393/on/",
+            "offUrl": "http://192.168.0.152/gpio393/off/",
+            "statusUrl": "http://192.168.0.152/gpio393/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht394",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio394/on/",
+            "offUrl": "http://192.168.0.152/gpio394/off/",
+            "statusUrl": "http://192.168.0.152/gpio394/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht395",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio395/on/",
+            "offUrl": "http://192.168.0.152/gpio395/off/",
+            "statusUrl": "http://192.168.0.152/gpio395/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht396",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio396/on/",
+            "offUrl": "http://192.168.0.152/gpio396/off/",
+            "statusUrl": "http://192.168.0.152/gpio396/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht397",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio397/on/",
+            "offUrl": "http://192.168.0.152/gpio397/off/",
+            "statusUrl": "http://192.168.0.152/gpio397/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht398",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio398/on/",
+            "offUrl": "http://192.168.0.152/gpio398/off/",
+            "statusUrl": "http://192.168.0.152/gpio398/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht399",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio399/on/",
+            "offUrl": "http://192.168.0.152/gpio399/off/",
+            "statusUrl": "http://192.168.0.152/gpio399/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht400",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio400/on/",
+            "offUrl": "http://192.168.0.152/gpio400/off/",
+            "statusUrl": "http://192.168.0.152/gpio400/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht401",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio401/on/",
+            "offUrl": "http://192.168.0.152/gpio401/off/",
+            "statusUrl": "http://192.168.0.152/gpio401/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht402",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio402/on/",
+            "offUrl": "http://192.168.0.152/gpio402/off/",
+            "statusUrl": "http://192.168.0.152/gpio402/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht403",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio403/on/",
+            "offUrl": "http://192.168.0.152/gpio403/off/",
+            "statusUrl": "http://192.168.0.152/gpio403/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht404",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio404/on/",
+            "offUrl": "http://192.168.0.152/gpio404/off/",
+            "statusUrl": "http://192.168.0.152/gpio404/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht405",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio405/on/",
+            "offUrl": "http://192.168.0.152/gpio405/off/",
+            "statusUrl": "http://192.168.0.152/gpio405/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht406",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio406/on/",
+            "offUrl": "http://192.168.0.152/gpio406/off/",
+            "statusUrl": "http://192.168.0.152/gpio406/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht407",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio407/on/",
+            "offUrl": "http://192.168.0.152/gpio407/off/",
+            "statusUrl": "http://192.168.0.152/gpio407/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht408",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio408/on/",
+            "offUrl": "http://192.168.0.152/gpio408/off/",
+            "statusUrl": "http://192.168.0.152/gpio408/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht409",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio409/on/",
+            "offUrl": "http://192.168.0.152/gpio409/off/",
+            "statusUrl": "http://192.168.0.152/gpio409/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht410",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio410/on/",
+            "offUrl": "http://192.168.0.152/gpio410/off/",
+            "statusUrl": "http://192.168.0.152/gpio410/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht411",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio411/on/",
+            "offUrl": "http://192.168.0.152/gpio411/off/",
+            "statusUrl": "http://192.168.0.152/gpio411/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht412",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio412/on/",
+            "offUrl": "http://192.168.0.152/gpio412/off/",
+            "statusUrl": "http://192.168.0.152/gpio412/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht413",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio413/on/",
+            "offUrl": "http://192.168.0.152/gpio413/off/",
+            "statusUrl": "http://192.168.0.152/gpio413/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht414",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio414/on/",
+            "offUrl": "http://192.168.0.152/gpio414/off/",
+            "statusUrl": "http://192.168.0.152/gpio414/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht415",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio415/on/",
+            "offUrl": "http://192.168.0.152/gpio415/off/",
+            "statusUrl": "http://192.168.0.152/gpio415/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht416",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio416/on/",
+            "offUrl": "http://192.168.0.152/gpio416/off/",
+            "statusUrl": "http://192.168.0.152/gpio416/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht417",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio417/on/",
+            "offUrl": "http://192.168.0.152/gpio417/off/",
+            "statusUrl": "http://192.168.0.152/gpio417/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht418",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio418/on/",
+            "offUrl": "http://192.168.0.152/gpio418/off/",
+            "statusUrl": "http://192.168.0.152/gpio418/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht419",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio419/on/",
+            "offUrl": "http://192.168.0.152/gpio419/off/",
+            "statusUrl": "http://192.168.0.152/gpio419/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht420",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio420/on/",
+            "offUrl": "http://192.168.0.152/gpio420/off/",
+            "statusUrl": "http://192.168.0.152/gpio420/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht421",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio421/on/",
+            "offUrl": "http://192.168.0.152/gpio421/off/",
+            "statusUrl": "http://192.168.0.152/gpio421/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht422",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio422/on/",
+            "offUrl": "http://192.168.0.152/gpio422/off/",
+            "statusUrl": "http://192.168.0.152/gpio422/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht423",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio423/on/",
+            "offUrl": "http://192.168.0.152/gpio423/off/",
+            "statusUrl": "http://192.168.0.152/gpio423/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht424",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio424/on/",
+            "offUrl": "http://192.168.0.152/gpio424/off/",
+            "statusUrl": "http://192.168.0.152/gpio424/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht425",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio425/on/",
+            "offUrl": "http://192.168.0.152/gpio425/off/",
+            "statusUrl": "http://192.168.0.152/gpio425/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht426",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio426/on/",
+            "offUrl": "http://192.168.0.152/gpio426/off/",
+            "statusUrl": "http://192.168.0.152/gpio426/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht427",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio427/on/",
+            "offUrl": "http://192.168.0.152/gpio427/off/",
+            "statusUrl": "http://192.168.0.152/gpio427/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht428",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio428/on/",
+            "offUrl": "http://192.168.0.152/gpio428/off/",
+            "statusUrl": "http://192.168.0.152/gpio428/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht429",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio429/on/",
+            "offUrl": "http://192.168.0.152/gpio429/off/",
+            "statusUrl": "http://192.168.0.152/gpio429/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht430",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio430/on/",
+            "offUrl": "http://192.168.0.152/gpio430/off/",
+            "statusUrl": "http://192.168.0.152/gpio430/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht431",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio431/on/",
+            "offUrl": "http://192.168.0.152/gpio431/off/",
+            "statusUrl": "http://192.168.0.152/gpio431/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht432",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio432/on/",
+            "offUrl": "http://192.168.0.152/gpio432/off/",
+            "statusUrl": "http://192.168.0.152/gpio432/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht433",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio433/on/",
+            "offUrl": "http://192.168.0.152/gpio433/off/",
+            "statusUrl": "http://192.168.0.152/gpio433/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht434",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio434/on/",
+            "offUrl": "http://192.168.0.152/gpio434/off/",
+            "statusUrl": "http://192.168.0.152/gpio434/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht435",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio435/on/",
+            "offUrl": "http://192.168.0.152/gpio435/off/",
+            "statusUrl": "http://192.168.0.152/gpio435/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht436",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio436/on/",
+            "offUrl": "http://192.168.0.152/gpio436/off/",
+            "statusUrl": "http://192.168.0.152/gpio436/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht437",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio437/on/",
+            "offUrl": "http://192.168.0.152/gpio437/off/",
+            "statusUrl": "http://192.168.0.152/gpio437/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht438",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio438/on/",
+            "offUrl": "http://192.168.0.152/gpio438/off/",
+            "statusUrl": "http://192.168.0.152/gpio438/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht439",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio439/on/",
+            "offUrl": "http://192.168.0.152/gpio439/off/",
+            "statusUrl": "http://192.168.0.152/gpio439/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht440",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio440/on/",
+            "offUrl": "http://192.168.0.152/gpio440/off/",
+            "statusUrl": "http://192.168.0.152/gpio440/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht441",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio441/on/",
+            "offUrl": "http://192.168.0.152/gpio441/off/",
+            "statusUrl": "http://192.168.0.152/gpio441/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht442",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio442/on/",
+            "offUrl": "http://192.168.0.152/gpio442/off/",
+            "statusUrl": "http://192.168.0.152/gpio442/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht443",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio443/on/",
+            "offUrl": "http://192.168.0.152/gpio443/off/",
+            "statusUrl": "http://192.168.0.152/gpio443/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht444",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio444/on/",
+            "offUrl": "http://192.168.0.152/gpio444/off/",
+            "statusUrl": "http://192.168.0.152/gpio444/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht445",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio445/on/",
+            "offUrl": "http://192.168.0.152/gpio445/off/",
+            "statusUrl": "http://192.168.0.152/gpio445/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht446",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio446/on/",
+            "offUrl": "http://192.168.0.152/gpio446/off/",
+            "statusUrl": "http://192.168.0.152/gpio446/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht447",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio447/on/",
+            "offUrl": "http://192.168.0.152/gpio447/off/",
+            "statusUrl": "http://192.168.0.152/gpio447/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht448",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio448/on/",
+            "offUrl": "http://192.168.0.152/gpio448/off/",
+            "statusUrl": "http://192.168.0.152/gpio448/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht449",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio449/on/",
+            "offUrl": "http://192.168.0.152/gpio449/off/",
+            "statusUrl": "http://192.168.0.152/gpio449/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht450",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio450/on/",
+            "offUrl": "http://192.168.0.152/gpio450/off/",
+            "statusUrl": "http://192.168.0.152/gpio450/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht451",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio451/on/",
+            "offUrl": "http://192.168.0.152/gpio451/off/",
+            "statusUrl": "http://192.168.0.152/gpio451/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht452",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio452/on/",
+            "offUrl": "http://192.168.0.152/gpio452/off/",
+            "statusUrl": "http://192.168.0.152/gpio452/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht453",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio453/on/",
+            "offUrl": "http://192.168.0.152/gpio453/off/",
+            "statusUrl": "http://192.168.0.152/gpio453/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht454",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio454/on/",
+            "offUrl": "http://192.168.0.152/gpio454/off/",
+            "statusUrl": "http://192.168.0.152/gpio454/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht455",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio455/on/",
+            "offUrl": "http://192.168.0.152/gpio455/off/",
+            "statusUrl": "http://192.168.0.152/gpio455/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht456",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio456/on/",
+            "offUrl": "http://192.168.0.152/gpio456/off/",
+            "statusUrl": "http://192.168.0.152/gpio456/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht457",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio457/on/",
+            "offUrl": "http://192.168.0.152/gpio457/off/",
+            "statusUrl": "http://192.168.0.152/gpio457/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht458",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio458/on/",
+            "offUrl": "http://192.168.0.152/gpio458/off/",
+            "statusUrl": "http://192.168.0.152/gpio458/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht459",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio459/on/",
+            "offUrl": "http://192.168.0.152/gpio459/off/",
+            "statusUrl": "http://192.168.0.152/gpio459/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht460",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio460/on/",
+            "offUrl": "http://192.168.0.152/gpio460/off/",
+            "statusUrl": "http://192.168.0.152/gpio460/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht461",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio461/on/",
+            "offUrl": "http://192.168.0.152/gpio461/off/",
+            "statusUrl": "http://192.168.0.152/gpio461/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht462",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio462/on/",
+            "offUrl": "http://192.168.0.152/gpio462/off/",
+            "statusUrl": "http://192.168.0.152/gpio462/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht463",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio463/on/",
+            "offUrl": "http://192.168.0.152/gpio463/off/",
+            "statusUrl": "http://192.168.0.152/gpio463/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht464",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio464/on/",
+            "offUrl": "http://192.168.0.152/gpio464/off/",
+            "statusUrl": "http://192.168.0.152/gpio464/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht465",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio465/on/",
+            "offUrl": "http://192.168.0.152/gpio465/off/",
+            "statusUrl": "http://192.168.0.152/gpio465/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht466",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio466/on/",
+            "offUrl": "http://192.168.0.152/gpio466/off/",
+            "statusUrl": "http://192.168.0.152/gpio466/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht467",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio467/on/",
+            "offUrl": "http://192.168.0.152/gpio467/off/",
+            "statusUrl": "http://192.168.0.152/gpio467/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht468",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio468/on/",
+            "offUrl": "http://192.168.0.152/gpio468/off/",
+            "statusUrl": "http://192.168.0.152/gpio468/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht469",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio469/on/",
+            "offUrl": "http://192.168.0.152/gpio469/off/",
+            "statusUrl": "http://192.168.0.152/gpio469/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht470",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio470/on/",
+            "offUrl": "http://192.168.0.152/gpio470/off/",
+            "statusUrl": "http://192.168.0.152/gpio470/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht471",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio471/on/",
+            "offUrl": "http://192.168.0.152/gpio471/off/",
+            "statusUrl": "http://192.168.0.152/gpio471/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht472",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio472/on/",
+            "offUrl": "http://192.168.0.152/gpio472/off/",
+            "statusUrl": "http://192.168.0.152/gpio472/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht473",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio473/on/",
+            "offUrl": "http://192.168.0.152/gpio473/off/",
+            "statusUrl": "http://192.168.0.152/gpio473/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht474",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio474/on/",
+            "offUrl": "http://192.168.0.152/gpio474/off/",
+            "statusUrl": "http://192.168.0.152/gpio474/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht475",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio475/on/",
+            "offUrl": "http://192.168.0.152/gpio475/off/",
+            "statusUrl": "http://192.168.0.152/gpio475/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht476",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio476/on/",
+            "offUrl": "http://192.168.0.152/gpio476/off/",
+            "statusUrl": "http://192.168.0.152/gpio476/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht477",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio477/on/",
+            "offUrl": "http://192.168.0.152/gpio477/off/",
+            "statusUrl": "http://192.168.0.152/gpio477/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht478",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio478/on/",
+            "offUrl": "http://192.168.0.152/gpio478/off/",
+            "statusUrl": "http://192.168.0.152/gpio478/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht479",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio479/on/",
+            "offUrl": "http://192.168.0.152/gpio479/off/",
+            "statusUrl": "http://192.168.0.152/gpio479/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht480",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio480/on/",
+            "offUrl": "http://192.168.0.152/gpio480/off/",
+            "statusUrl": "http://192.168.0.152/gpio480/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht481",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio481/on/",
+            "offUrl": "http://192.168.0.152/gpio481/off/",
+            "statusUrl": "http://192.168.0.152/gpio481/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht482",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio482/on/",
+            "offUrl": "http://192.168.0.152/gpio482/off/",
+            "statusUrl": "http://192.168.0.152/gpio482/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht483",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio483/on/",
+            "offUrl": "http://192.168.0.152/gpio483/off/",
+            "statusUrl": "http://192.168.0.152/gpio483/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht484",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio484/on/",
+            "offUrl": "http://192.168.0.152/gpio484/off/",
+            "statusUrl": "http://192.168.0.152/gpio484/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht485",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio485/on/",
+            "offUrl": "http://192.168.0.152/gpio485/off/",
+            "statusUrl": "http://192.168.0.152/gpio485/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht486",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio486/on/",
+            "offUrl": "http://192.168.0.152/gpio486/off/",
+            "statusUrl": "http://192.168.0.152/gpio486/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht487",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio487/on/",
+            "offUrl": "http://192.168.0.152/gpio487/off/",
+            "statusUrl": "http://192.168.0.152/gpio487/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht488",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio488/on/",
+            "offUrl": "http://192.168.0.152/gpio488/off/",
+            "statusUrl": "http://192.168.0.152/gpio488/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht489",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio489/on/",
+            "offUrl": "http://192.168.0.152/gpio489/off/",
+            "statusUrl": "http://192.168.0.152/gpio489/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht490",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio490/on/",
+            "offUrl": "http://192.168.0.152/gpio490/off/",
+            "statusUrl": "http://192.168.0.152/gpio490/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht491",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio491/on/",
+            "offUrl": "http://192.168.0.152/gpio491/off/",
+            "statusUrl": "http://192.168.0.152/gpio491/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht492",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio492/on/",
+            "offUrl": "http://192.168.0.152/gpio492/off/",
+            "statusUrl": "http://192.168.0.152/gpio492/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht493",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio493/on/",
+            "offUrl": "http://192.168.0.152/gpio493/off/",
+            "statusUrl": "http://192.168.0.152/gpio493/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht494",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio494/on/",
+            "offUrl": "http://192.168.0.152/gpio494/off/",
+            "statusUrl": "http://192.168.0.152/gpio494/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht495",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio495/on/",
+            "offUrl": "http://192.168.0.152/gpio495/off/",
+            "statusUrl": "http://192.168.0.152/gpio495/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht496",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio496/on/",
+            "offUrl": "http://192.168.0.152/gpio496/off/",
+            "statusUrl": "http://192.168.0.152/gpio496/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht497",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio497/on/",
+            "offUrl": "http://192.168.0.152/gpio497/off/",
+            "statusUrl": "http://192.168.0.152/gpio497/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht498",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio498/on/",
+            "offUrl": "http://192.168.0.152/gpio498/off/",
+            "statusUrl": "http://192.168.0.152/gpio498/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht499",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio499/on/",
+            "offUrl": "http://192.168.0.152/gpio499/off/",
+            "statusUrl": "http://192.168.0.152/gpio499/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht500",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio500/on/",
+            "offUrl": "http://192.168.0.152/gpio500/off/",
+            "statusUrl": "http://192.168.0.152/gpio500/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht501",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio501/on/",
+            "offUrl": "http://192.168.0.152/gpio501/off/",
+            "statusUrl": "http://192.168.0.152/gpio501/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht502",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio502/on/",
+            "offUrl": "http://192.168.0.152/gpio502/off/",
+            "statusUrl": "http://192.168.0.152/gpio502/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht503",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio503/on/",
+            "offUrl": "http://192.168.0.152/gpio503/off/",
+            "statusUrl": "http://192.168.0.152/gpio503/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht504",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio504/on/",
+            "offUrl": "http://192.168.0.152/gpio504/off/",
+            "statusUrl": "http://192.168.0.152/gpio504/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht505",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio505/on/",
+            "offUrl": "http://192.168.0.152/gpio505/off/",
+            "statusUrl": "http://192.168.0.152/gpio505/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht506",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio506/on/",
+            "offUrl": "http://192.168.0.152/gpio506/off/",
+            "statusUrl": "http://192.168.0.152/gpio506/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht507",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio507/on/",
+            "offUrl": "http://192.168.0.152/gpio507/off/",
+            "statusUrl": "http://192.168.0.152/gpio507/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht508",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio508/on/",
+            "offUrl": "http://192.168.0.152/gpio508/off/",
+            "statusUrl": "http://192.168.0.152/gpio508/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht509",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio509/on/",
+            "offUrl": "http://192.168.0.152/gpio509/off/",
+            "statusUrl": "http://192.168.0.152/gpio509/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht510",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio510/on/",
+            "offUrl": "http://192.168.0.152/gpio510/off/",
+            "statusUrl": "http://192.168.0.152/gpio510/status/"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "ht511",
+            "switchType": "stateful",
+            "onUrl": "http://192.168.0.152/gpio511/on/",
+            "offUrl": "http://192.168.0.152/gpio511/off/",
+            "statusUrl": "http://192.168.0.152/gpio511/status/"
+        }
+    ],
+    "platforms": [
+        {
+            "name": "Config",
+            "port": 8581,
+            "platform": "config"
+        },
+        {
+            "name": "eWeLink",
+            "username": "gdvsainathreddy@gmail.com",
+            "password": "Sainath06.",
+            "mode": "auto",
+            "language": "en",
+            "singleDevices": [
+                {
+                    "label": "Guest bathroom Perfume diffuser ",
+                    "deviceId": "10007e7fac",
+                    "deviceModel": "single",
+                    "showAs": "purifier"
+                },
+                {
+                    "label": "Bathroom perfume diffuser ",
+                    "deviceId": "10007e961a",
+                    "deviceModel": "single",
+                    "showAs": "purifier"
+                }
+            ],
+            "multiDevices": [
+                {
+                    "label": "Diy1",
+                    "deviceId": "1001330016",
+                    "deviceModel": "4ch",
+                    "showAs": "outlet"
+                }
+            ],
+            "lightDevices": [
+                {
+                    "deviceId": "10009906e4",
+                    "deviceModel": "l1"
+                }
+            ],
+            "thDevices": [
+                {
+                    "label": "Room heater",
+                    "deviceId": "10004b16b4",
+                    "ignoreDevice": false,
+                    "deviceModel": "th",
+                    "showAs": "thermostat"
+                },
+                {
+                    "label": "Right side bed heater",
+                    "deviceId": "1001392395",
+                    "deviceModel": "th",
+                    "showAs": "heater",
+                    "maxTarget": 45
+                },
+                {
+                    "label": "Left side bed heater",
+                    "deviceId": "10013939ea",
+                    "deviceModel": "th",
+                    "showAs": "heater",
+                    "maxTarget": 45
+                }
+            ],
+            "bridgeSensors": [
+                {
+                    "label": "R1SWL1",
+                    "fullDeviceId": "1000852f99SW6",
+                    "type": "contact",
+                    "sensorTimeLength": 1
+                },
+                {
+                    "label": "R1SWL2",
+                    "fullDeviceId": "1000852f99SW7",
+                    "type": "contact",
+                    "sensorTimeLength": 1
+                },
+                {
+                    "label": "R1SWL3",
+                    "fullDeviceId": "1000852f99SW8",
+                    "type": "contact",
+                    "sensorTimeLength": 1
+                },
+                {
+                    "label": "R1SWL4",
+                    "fullDeviceId": "1000852f99SW9",
+                    "type": "contact",
+                    "sensorTimeLength": 1
+                },
+                {
+                    "label": "R1SWR1",
+                    "fullDeviceId": "1000852f99SW2",
+                    "type": "contact",
+                    "sensorTimeLength": 1
+                },
+                {
+                    "label": "R1SWR2",
+                    "fullDeviceId": "1000852f99SW3",
+                    "type": "contact",
+                    "sensorTimeLength": 1
+                },
+                {
+                    "label": "R1SWR3",
+                    "fullDeviceId": "1000852f99SW4",
+                    "type": "contact",
+                    "sensorTimeLength": 1
+                },
+                {
+                    "label": "R1SWR4",
+                    "fullDeviceId": "1000852f99SW5",
+                    "type": "contact",
+                    "sensorTimeLength": 1
+                },
+                {
+                    "label": "R2SWL1",
+                    "fullDeviceId": "1000852f99SW11",
+                    "type": "contact",
+                    "sensorTimeLength": 1
+                },
+                {
+                    "label": "R2SWR1",
+                    "fullDeviceId": "1000852f99SW12",
+                    "type": "contact",
+                    "sensorTimeLength": 1
+                },
+                {
+                    "label": "R3SWL1",
+                    "fullDeviceId": "10011f9fe9SW1",
+                    "deviceType": "sensor",
+                    "type": "p_button"
+                }
+            ],
+            "_bridge": {
+                "username": "0E:5E:2C:EC:2B:C9",
+                "port": 41261
+            },
+            "platform": "eWeLink"
+        },
+        {
+            "name": "RPi",
+            "hosts": [
+                {
+                    "host": "192.168.0.107:8888",
+                    "name": "hbserver1",
+                    "hidden": true,
+                    "noPowerLed": true,
+                    "noSmokeSensor": true,
+                    "devices": [
+                        {
+                            "device": "switch",
+                            "name": "Outside Light",
+                            "gpio": 4,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Bedroom Tube Light",
+                            "gpio": 14,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Switch3",
+                            "gpio": 15,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Switch4",
+                            "gpio": 17,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Bedroom Cove Light",
+                            "gpio": 18,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Bedroom Hanging Light",
+                            "gpio": 27,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Bedroom Spot Light",
+                            "gpio": 22,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Bedroom White Light",
+                            "gpio": 23,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Foyer Light",
+                            "gpio": 24,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Dining Light 2",
+                            "gpio": 10,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Dining Light 1",
+                            "gpio": 9,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Tree Light",
+                            "gpio": 25,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Living Light 2",
+                            "gpio": 11,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Living Cove Light",
+                            "gpio": 8,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Living Light 1",
+                            "gpio": 7,
+                            "reversed": true
+                        },
+                        {
+                            "device": "switch",
+                            "name": "Sofa Light",
+                            "gpio": 5,
+                            "reversed": true
+                        }
+                    ]
+                }
+            ],
+            "platform": "RPi"
+        },
+        {
+            "name": "Camera FFmpeg",
+            "porthttp": 8080,
+            "platform": "Camera-ffmpeg"
+        },
+        {
+            "name": "TuyaWebPlatform",
+            "options": {
+                "username": "gdvsainathreddy@gmail.com",
+                "password": "Sainath06.",
+                "countryCode": "91",
+                "platform": "smart_life"
+            },
+            "scenes": false,
+            "platform": "TuyaWebPlatform"
+        },
+        {
+            "cameras": [
+                {
+                    "name": "Outdoor Tapo",
+                    "ipAddress": "192.168.0.171",
+                    "password": "Sainath06.",
+                    "streamUser": "gdvsainathreddy",
+                    "streamPassword": "Sainath06."
+                }
+            ],
+            "platform": "tapo-camera"
+        },
+        {
+            "name": "Video Doorbell",
+            "cameras": [
+                {
+                    "name": "Default Camera",
+                    "button": true,
+                    "motion": false,
+                    "throttle": 10000,
+                    "videoConfig": {
+                        "source": "-i rtsp://gdvsainathreddy:Sainath06.@192.168.0.171:554/stream2",
+                        "maxStreams": 2,
+                        "maxWidth": 1280,
+                        "maxHeight": 720,
+                        "nativeWidth": 1280,
+                        "nativeHeight": 720,
+                        "maxFPS": 10,
+                        "maxBitrate": 300,
+                        "vcodec": "libx264",
+                        "packetSize": 1316,
+                        "vflip": false,
+                        "hflip": false,
+                        "debug": false
+                    }
+                }
+            ],
+            "platform": "Video-doorbell"
+        },
+        {
+            "name": "Tuya",
+            "options": {
+                "projectType": "2",
+                "accessId": "rx9nsdhq9dqdg57nymxw",
+                "accessKey": "fdf5b945874d43aab6cc12137ee74908",
+                "countryCode": 91,
+                "username": "gdvsainathreddy@gmail.com",
+                "password": "Sainath06.",
+                "appSchema": "tuyaSmart"
+            },
+            "_bridge": {
+                "username": "0E:13:18:35:9A:D7",
+                "port": 35219
+            },
+            "platform": "TuyaPlatform"
+        },
+        {
+            "name": "CameraUI",
+            "port": 8081,
+            "atHomeSwitch": false,
+            "logLevel": "info",
+            "mqtt": {
+                "active": false,
+                "tls": false,
+                "port": 1883
+            },
+            "http": {
+                "active": false,
+                "port": 7272,
+                "localhttp": false
+            },
+            "smtp": {
+                "active": false,
+                "port": 2727,
+                "space_replace": "+"
+            },
+            "ftp": {
+                "active": false,
+                "useFile": false,
+                "port": 5050
+            },
+            "ssl": {
+                "active": false
+            },
+            "options": {
+                "videoProcessor": "/usr/local/lib/node_modules/homebridge-camera-ui/node_modules/ffmpeg-for-homebridge/ffmpeg"
+            },
+            "cameras": [
+                {
+                    "name": "Outdoor Camera",
+                    "privacySwitch": true,
+                    "motion": true,
+                    "doorbell": true,
+                    "switches": true,
+                    "motionTimeout": 15,
+                    "unbridge": true,
+                    "hsv": true,
+                    "prebuffering": true,
+                    "prebufferLength": 4,
+                    "videoConfig": {
+                        "source": "-rtsp_transport tcp -i rtsp://gdvsainathreddy:Sainath06.@192.168.0.171:554/stream1",
+                        "subSource": "-rtsp_transport tcp -i rtsp://gdvsainathreddy:Sainath06.@192.168.0.171:554/stream1",
+                        "stillImageSource": "-rtsp_transport tcp -i rtsp://gdvsainathreddy:Sainath06.@192.168.0.171:554/stream1",
+                        "readRate": true,
+                        "vcodec": "copy",
+                        "acodec": "libfdk_aac",
+                        "audio": true
+                    },
+                    "smtp": {
+                        "email": "Camera UI"
+                    },
+                    "videoanalysis": {
+                        "active": true
+                    },
+                    "mqtt": {}
+                }
+            ],
+            "platform": "CameraUI"
+        }
+    ],
+    "disabledPlugins": [
+        "homebridge-camera-ffmpeg",
+        "homebridge-tapo-camera",
+        "homebridge-videodoorbell",
+        "homebridge-rpi",
+        "@0x5e/homebridge-tuya-platform",
+        "homebridge-dummy"
+    ]
+}

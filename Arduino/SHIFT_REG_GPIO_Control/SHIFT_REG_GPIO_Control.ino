@@ -14,7 +14,6 @@ void setup() {
 void loop() {
   if (Serial.available() > 0) {
     String input = Serial.readStringUntil('\n');
-    Serial.println(input);
     if (input.startsWith("SET")) {
       int gpio, state;
       sscanf(input.c_str(), "SET %d %d", &gpio, &state);
