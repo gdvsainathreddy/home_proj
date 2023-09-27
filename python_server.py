@@ -6,8 +6,8 @@ import serial.tools.list_ports
 def find_device(vendor_id):
     ports = list(serial.tools.list_ports.comports())
     for p in ports:
-        print(p.serial_number)
-        if p.serial_number == vendor_id:
+        print(p.vid)
+        if p.vid == vendor_id:
             return p.device
     return None
 
@@ -15,7 +15,7 @@ def open_serial_connection(port, baudrate=115200):
     ser = serial.Serial(port, baudrate)
     return ser
 
-vendor_id = "55739323737351909110"
+vendor_id = 6790
 device_port = find_device(vendor_id)
 
 
