@@ -7,6 +7,7 @@ from urllib.parse import urlparse, parse_qs
 fan_status = {}
 gpio_status = {}
 lock_status = {}
+rgb_status = {}
 
 def find_device(vendor_id):
     ports = list(serial.tools.list_ports.comports())
@@ -44,6 +45,7 @@ class RequestHandler(SimpleHTTPRequestHandler):
     global fan_status
     global gpio_status
     global lock_status
+    global rgb_status
     def set_response(self, json_type, response):
         self.send_response(200)
         if json_type:
@@ -99,6 +101,49 @@ class RequestHandler(SimpleHTTPRequestHandler):
                 response = { "currentState": fan_status[fan]["setState"], "rotationSpeed" : fan_status[fan]["setRotationSpeed"], "rotationDirection": fan_status[fan]["setRotationDirection"]}
                 self.set_response(json_type=True,response=response)
                 return
+        elif path[1].startswith('rgb'):
+            url = urlparse(self.path)
+            params = parse_qs(url.query)
+            # print(params)
+            rgb = int(path[1][3:])
+            action = path[2]
+            if 'value' in params:
+                int_value = params['value'][0]
+                action = action.split("?")[0]
+                # print(action,int_value)
+                if action == 'status':
+                    rgb_status[rgb][action] = int_value
+                    # print(fan_status)
+                    response = int_value
+                    self.set_response(json_type=False,response=response)
+                    return
+                elif action == 'brightness':
+                    rgb_status[rgb][action] = str(int_value)
+                    # print(fan_status)
+                    response = int_value
+                    self.set_response(json_type=False,response=response)
+                    return
+                elif action == 'color':
+                    int_value = params['value'][0]
+                    # Ensure int_value is a 6-digit hex number
+                    int_value = int_value.lstrip('#')
+                    if len(int_value) != 6:
+                        int_value = 'FFFFFF'  # Default to white if the format is incorrect or missing
+                    else:
+                        int_value = int_value.zfill(6)  # Ensure it's always 6 digits
+                    hex_color = int_value
+                    rgb_status[rgb][action] = hex_color
+                    response = hex_color
+                    self.set_response(json_type=False, response=response)
+                    return
+            elif action in ['status', 'brightness', 'color']:
+                if rgb not in rgb_status:
+                    # print("_________________________________")
+                    rgb_status[rgb] = {"status": 0, "brightness": "0", "color": "FFFFFF"}
+                # print(rgb_status)
+                response = rgb_status[rgb][action]
+                self.set_response(json_type=False,response=response)
+                return
         elif path[1].startswith('lock'):
             url = urlparse(self.path)
             params = parse_qs(url.query)
@@ -117,7 +162,7 @@ class RequestHandler(SimpleHTTPRequestHandler):
                 response = { "currentState": lock_status[lock]["setState"]}
                 self.set_response(json_type=True,response=response)
                 return
-
+        print(self.path)
         # If the URL doesn't match our pattern, serve a 404 response
         self.send_response(404)
         self.send_header('Content-type', 'application/json')
