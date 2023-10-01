@@ -3,6 +3,7 @@ import serial
 import serial.tools.list_ports
 import json
 from urllib.parse import urlparse, parse_qs
+import requests
 
 fan_status = {}
 gpio_status = {}
@@ -70,7 +71,14 @@ class RequestHandler(SimpleHTTPRequestHandler):
                 if action == 'on':
                     gpio_status[pin] = 1
                     response = "OK"
-                    # ser.write(f'SET {pin} 1\n'.encode())
+                    if gpio_status[10] == 1:
+                        url = "http://192.168.0.152:9876/triggered?code=9876"
+                        response = requests.get(url)
+                        if response.status_code == 200:
+                            print("HTTP request successful")
+                        else:
+                            print(f"HTTP request failed with status code {response.status_code}")
+                            # ser.write(f'SET {pin} 1\n'.encode())
                 elif action == 'off':
                     gpio_status[pin] = 0
                     response = "OK"
@@ -156,7 +164,7 @@ class RequestHandler(SimpleHTTPRequestHandler):
             action = path[2]
             if action == 'setState':
                 int_value = int(params['value'][0])
-                fan_status[lock][action] = int_value
+                lock_status[lock][action] = int_value
                 response = "OK"
                 self.set_response(json_type=False,response=response)
                 return
