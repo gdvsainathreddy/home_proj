@@ -59,7 +59,11 @@ class RequestHandler(SimpleHTTPRequestHandler):
     
     def do_GET(self):
         path = self.path.split('/')
-        if path[1].startswith('gpio') and len(path) > 3:
+        if path[1].startswith('security') and len(path) > 3:
+            response = "OK"
+            self.set_response(json_type=False,response=response)
+            return
+        elif path[1].startswith('gpio') and len(path) > 3:
             pin = int(path[1][4:])
             action = path[2]
             if action in ['on', 'off', 'status']:
