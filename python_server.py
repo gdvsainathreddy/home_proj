@@ -156,7 +156,7 @@ class RequestHandler(SimpleHTTPRequestHandler):
             action = path[2]
             if action == 'setState':
                 int_value = int(params['value'][0])
-                fan_status[lock][action] = int_value
+                lock_status[lock][action] = int_value
                 response = "OK"
                 self.set_response(json_type=False,response=response)
                 return
