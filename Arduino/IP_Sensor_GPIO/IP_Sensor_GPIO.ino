@@ -75,6 +75,9 @@ void setGPIOState(int gpio, bool state) {
   int bitIndex = gpio % 8;
 
   bitWrite(registers[registerIndex], bitIndex, state);
+  if (gpio == 12 && state) {
+    callURL("192.168.0.152", 9876, "/triggered?code=9876");
+  }
   updateShiftRegister();
 }
 
@@ -107,3 +110,29 @@ void loadStateFromEEPROM() {
     EEPROM.get(i * sizeof(byte), registers[i]);
   }
 }
+
+void callURL(const char* host, const int port, const char* endpoint) {
+  WiFiClient client;
+  const int httpPort = port;
+  
+  if (!client.connect(host, httpPort)) {
+    Serial.println("Connection failed");
+    return;
+  }
+  
+  client.print(String("GET ") + endpoint + " HTTP/1.1\r\n" +
+               "Host: " + host + "\r\n" +
+               "Connection: close\r\n\r\n");
+  
+  while(client.connected() && !client.available()){
+    delay(1); // Wait for data
+  }
+  
+  while(client.connected() || client.available()){
+    char c = client.read(); // Read data from server
+    Serial.print(c);
+  }
+  
+  client.stop();
+}
+
