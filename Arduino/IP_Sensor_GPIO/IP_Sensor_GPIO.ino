@@ -1,5 +1,6 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
+#include <EEPROM.h>
 
 const char* ssid = "Guggulla_IoT_Support";
 const char* password = "9951414244";
@@ -33,6 +34,12 @@ void setup() {
     Serial.println("Connecting to WiFi...");
   }
   Serial.println("Connected to WiFi");
+  Serial.println("Loading States From EEPROM");
+  loadStateFromEEPROM();
+  Serial.println("Updating Powerup states");
+  updateShiftRegister();
+
+
 
   for (int i = 0; i < 32; i++) {
     String gpioOn = "/gpio" + String(i) + "/on/";
@@ -42,11 +49,13 @@ void setup() {
     server.on(gpioOn.c_str(), HTTP_GET, [i](){
       setGPIOState(i, true);
       server.send(200, "text/plain", "OK");
+      saveStateToEEPROM();
     });
     
     server.on(gpioOff.c_str(), HTTP_GET, [i](){
       setGPIOState(i, false);
       server.send(200, "text/plain", "OK");
+      saveStateToEEPROM();
     });
     
     server.on(gpioStatus.c_str(), HTTP_GET, [i](){
@@ -82,4 +91,17 @@ void updateShiftRegister() {
     shiftOut(dataPin, clockPin, MSBFIRST, registers[i]);
   }
   digitalWrite(latchPin, HIGH);
+}
+
+
+void saveStateToEEPROM() {
+  for (int i = 0; i < numOfRegisters; i++) {
+    EEPROM.put(i * sizeof(byte), registers[i]);
+  }
+}
+
+void loadStateFromEEPROM() {
+  for (int i = 0; i < numOfRegisters; i++) {
+    EEPROM.get(i * sizeof(byte), registers[i]);
+  }
 }
