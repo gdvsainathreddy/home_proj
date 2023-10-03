@@ -11,6 +11,13 @@ const int dataPin = 12;  // DS (serial data input)
 const int clockPin = 13; // SH_CP (clock)
 const int latchPin = 14; // ST_CP (latch)
 
+uint8_t DoorBell = D1;
+uint8_t DoorSensor = D2;
+
+int DoorBellState = 0;
+int DoorSensorState = 0;
+int lastDoorSensorState = 0;
+
 const int numOfRegisters = 4; // Assuming you're daisy-chaining 4 74HC595s
 
 byte registers[numOfRegisters] = {0}; // Initialize registers to 0
@@ -21,6 +28,9 @@ void setup() {
   pinMode(dataPin, OUTPUT);
   pinMode(clockPin, OUTPUT);
   pinMode(latchPin, OUTPUT);
+
+  pinMode(DoorBell, INPUT);
+  pinMode(DoorSensor, INPUT);
 
   IPAddress ip(192, 168, 0, 20); // Define the desired IP address
   IPAddress gateway(192, 168, 0, 1); // Define your gateway IP address
@@ -38,6 +48,7 @@ void setup() {
   loadStateFromEEPROM();
   Serial.println("Updating Powerup states");
   updateShiftRegister();
+  checkDoorOnPowerUp();
 
 
 
@@ -68,6 +79,49 @@ void setup() {
 
 void loop() {
   server.handleClient();
+  checkDoorBell();
+  checkDoor();
+}
+
+
+void checkDoorBell() {
+  DoorBellState = digitalRead(DoorBell);
+  if (DoorBellState == HIGH) {
+    Serial.println("Door Bell Triggered");
+    callURL("192.168.0.152", 9082, "/doorbell");
+  }
+}
+
+void checkDoor() {
+  DoorSensorState = digitalRead(DoorSensor);
+  // compare the DoorSensorState to its previous state
+  if (DoorSensorState != lastDoorSensorState) {
+    // if the state has changed, increment the counter
+    if (DoorSensorState == LOW) {
+      // if the current state is HIGH then the button went from off to on:
+      Serial.println("Door Sensor Opened");
+      callURL("192.168.0.152", 9091, "/door/1");
+    } else {
+      // if the current state is LOW then the button went from on to off:
+      Serial.println("Door Sensor Closed");
+      callURL("192.168.0.152", 9091, "/door/0");
+    }
+  }
+  // save the current state as the last state, for next time through the loop
+  lastDoorSensorState = DoorSensorState;
+}
+
+void checkDoorOnPowerUp() {
+  DoorSensorState = digitalRead(DoorSensor);
+  if (DoorSensorState == LOW) {
+    // if the current state is HIGH then the button went from off to on:
+    Serial.println("Door Sensor Opened");
+    callURL("192.168.0.152", 9091, "/door/1");
+  } else {
+    // if the current state is LOW then the button went from on to off:
+    Serial.println("Door Sensor Closed");
+    callURL("192.168.0.152", 9091, "/door/0");
+  }
 }
 
 void setGPIOState(int gpio, bool state) {
@@ -95,7 +149,6 @@ void updateShiftRegister() {
   }
   digitalWrite(latchPin, HIGH);
 }
-
 
 void saveStateToEEPROM() {
   for (int i = 0; i < numOfRegisters; i++) {
