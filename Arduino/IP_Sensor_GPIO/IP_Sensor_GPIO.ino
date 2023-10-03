@@ -17,7 +17,7 @@ byte registers[numOfRegisters] = {0}; // Initialize registers to 0
 
 void setup() {
   Serial.begin(115200);
-
+  EEPROM.begin(512);
   pinMode(dataPin, OUTPUT);
   pinMode(clockPin, OUTPUT);
   pinMode(latchPin, OUTPUT);
@@ -97,6 +97,8 @@ void updateShiftRegister() {
 void saveStateToEEPROM() {
   for (int i = 0; i < numOfRegisters; i++) {
     EEPROM.put(i * sizeof(byte), registers[i]);
+    delay(10);
+    EEPROM.commit();
   }
 }
 
