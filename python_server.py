@@ -1,13 +1,13 @@
-from http.server import SimpleHTTPRequestHandler, HTTPServer
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import serial
 import serial.tools.list_ports
 import json
 from urllib.parse import urlparse, parse_qs
 import requests
 
-fan_status = {}
+fan_status = {1:{"setState": 0, "setRotationSpeed": 0, "setRotationDirection": 0}}
 gpio_status = {}
-lock_status = {}
+lock_status = {1:{"setState": 0}}
 rgb_status = {}
 
 def find_device(vendor_id):
@@ -48,6 +48,7 @@ class RequestHandler(SimpleHTTPRequestHandler):
     global lock_status
     global rgb_status
     def set_response(self, json_type, response):
+        print("From set responce", json_type, response)
         self.send_response(200)
         if json_type:
             self.send_header('Content-type', 'application/json')
@@ -108,8 +109,6 @@ class RequestHandler(SimpleHTTPRequestHandler):
                     self.set_response(json_type=False,response=response)
                     return
             elif action == "status":
-                if fan not in fan_status:
-                    fan_status[fan] = {"setState": 0, "setRotationSpeed": 0, "setRotationDirection": 0}
                 response = { "currentState": fan_status[fan]["setState"], "rotationSpeed" : fan_status[fan]["setRotationSpeed"], "rotationDirection": fan_status[fan]["setRotationDirection"]}
                 self.set_response(json_type=True,response=response)
                 return
@@ -159,9 +158,9 @@ class RequestHandler(SimpleHTTPRequestHandler):
         elif path[1].startswith('lock'):
             url = urlparse(self.path)
             params = parse_qs(url.query)
-            # print(params)
             lock = int(path[1][4:])
             action = path[2]
+            action = action.split("?")[0]
             if action == 'setState':
                 int_value = int(params['value'][0])
                 lock_status[lock][action] = int_value
@@ -169,8 +168,6 @@ class RequestHandler(SimpleHTTPRequestHandler):
                 self.set_response(json_type=False,response=response)
                 return
             elif action == "status":
-                if lock not in lock_status:
-                    lock_status[lock] = {"setState": 0}
                 response = { "currentState": lock_status[lock]["setState"]}
                 self.set_response(json_type=True,response=response)
                 return
@@ -182,7 +179,7 @@ class RequestHandler(SimpleHTTPRequestHandler):
         json_response = {'status': 'error', 'message': 'Not Found'}
         self.wfile.write(json.dumps(json_response).encode())
 
-def run(server_class=HTTPServer, handler_class=RequestHandler, port=80):
+def run(server_class=ThreadingHTTPServer, handler_class=RequestHandler, port=80):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
     print(f"Serving on port {port}")
