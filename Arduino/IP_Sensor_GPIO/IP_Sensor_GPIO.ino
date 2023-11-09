@@ -13,10 +13,15 @@ const int latchPin = 14; // ST_CP (latch)
 
 uint8_t DoorBell = D1;
 uint8_t DoorSensor = D2;
+uint8_t MotionSensor = D0;
+
+uint8_t WiFiStatus = D8;
 
 int DoorBellState = 0;
 int DoorSensorState = 0;
 int lastDoorSensorState = 0;
+int MotionSensorState = 0;
+int lastMotionSensorState = 0;
 
 const int numOfRegisters = 4; // Assuming you're daisy-chaining 4 74HC595s
 
@@ -31,6 +36,9 @@ void setup() {
 
   pinMode(DoorBell, INPUT);
   pinMode(DoorSensor, INPUT);
+  pinMode(MotionSensor, INPUT);
+
+  pinMode(WiFiStatus, OUTPUT);
 
   IPAddress ip(192, 168, 0, 20); // Define the desired IP address
   IPAddress gateway(192, 168, 0, 1); // Define your gateway IP address
@@ -44,6 +52,9 @@ void setup() {
     Serial.println("Connecting to WiFi...");
   }
   Serial.println("Connected to WiFi");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
+  digitalWrite(WiFiStatus, 1);
   Serial.println("Loading States From EEPROM");
   loadStateFromEEPROM();
   Serial.println("Updating Powerup states");
@@ -81,8 +92,19 @@ void loop() {
   server.handleClient();
   checkDoorBell();
   checkDoor();
+  checkMotionSensor();
 }
 
+void checkMotionSensor() {
+  MotionSensorState = digitalRead(MotionSensor);
+  if (MotionSensorState != lastMotionSensorState) {
+    if (MotionSensorState == HIGH) {
+      Serial.println("MotionSensor Triggered");
+      callURL("192.168.0.152", 18089, "/");
+    }
+  }
+  lastMotionSensorState = MotionSensorState;
+}
 
 void checkDoorBell() {
   DoorBellState = digitalRead(DoorBell);
