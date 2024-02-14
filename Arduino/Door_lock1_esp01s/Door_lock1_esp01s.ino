@@ -110,7 +110,7 @@ void sendStateToServer(int state) {
   int httpCode = http.GET();
   http.end();
   Serial.print("Current State: ");
-  Serial.Println(state);
+  Serial.println(state);
   if (httpCode == 200) {
     Serial.println("State sent successfully");
   } else {
