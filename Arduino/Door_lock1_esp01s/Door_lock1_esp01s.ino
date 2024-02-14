@@ -87,16 +87,16 @@ void handleUnlock() {
 }
 
 void handleReset() {
-  Serial.println("HOLD Reset for 5 Seconds")
+  Serial.println("HOLD Reset for 5 Seconds");
   delay(5000); // Wait for 5 seconds
   if (digitalRead(RESET_PIN) == LOW) {
     // Erase EEPROM
-    Serial.println("Resetting Device")
+    Serial.println("Resetting Device");
     for (int i = 0; i < EEPROM_SIZE; ++i) {
       EEPROM.write(i, 0);
     }
     EEPROM.commit();
-    Serial.println("Reset Done, Restarting ESP")
+    Serial.println("Reset Done, Restarting ESP");
     ESP.restart();
   }
 }
@@ -109,8 +109,8 @@ void sendStateToServer(int state) {
   http.begin(client, serverAddress, serverPort, url);
   int httpCode = http.GET();
   http.end();
-  Serial.print("Current State: ")
-  Serial.Println(state)
+  Serial.print("Current State: ");
+  Serial.Println(state);
   if (httpCode == 200) {
     Serial.println("State sent successfully");
   } else {
@@ -194,7 +194,7 @@ void setup() {
     WiFi.mode(WIFI_AP);
     WiFi.softAPConfig(gateway, gateway, subnet); // Set IP to 192.168.0.1
     WiFi.softAP("LazyDoorLock_AP", "12345678");
-    Serial.println("Please connect to WIFI: LazyDoorLock_AP Password: 12345678, IP: 192.168.0.1")
+    Serial.println("Please connect to WIFI: LazyDoorLock_AP Password: 12345678, IP: 192.168.0.1");
   } else {
     Serial.println("Connecting to Stored WIFI");
     WiFi.begin(storedSSID.c_str(), storedPassword.c_str());
