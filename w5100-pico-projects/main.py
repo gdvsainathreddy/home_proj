@@ -39,7 +39,7 @@ def serve_files(conn, addr):
         if request.split()[1] == '/files':
             file_list = ''
             for file in uos.listdir():
-                file_list += f'<li><a href="/files/{file}">{file}</a></li>'
+                file_list += f'<a href="/files/{file}">{file}</a>'
             response = HTML_TEMPLATE.format(file_list)
         else:
             response = 'HTTP/1.1 404 Not Found\r\n\r\n'
