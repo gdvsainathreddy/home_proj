@@ -59,16 +59,12 @@ def serve_files(conn, addr):
             content = conn.recv(content_length)
             filename = content.split(b'filename="')[1].split(b'"')[0].decode()
             print("Filename: ",filename)
-            if file_exists(filename):
-                print("file exists")
-                response = "File already exists. Overwrite? (Yes/No)"
-                conn.sendall(response.encode())
-                confirmation = conn.recv(1024).decode().strip().lower()
-                if confirmation != 'yes':
-                    return
             with open(filename, 'wb') as f:
                 f.write(content)
-            response = f"File {filename} uploaded successfully."
+            if file_exists(filename):
+                response = f"File {filename} Replaced successfully."
+            else:
+                response = f"File {filename} uploaded successfully."
         else:
             response = 'HTTP/1.1 404 Not Found\r\n\r\n'
     else:
@@ -109,3 +105,4 @@ def start_server():
         conn.close()
 
 start_server()
+
