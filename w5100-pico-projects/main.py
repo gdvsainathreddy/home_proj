@@ -39,8 +39,18 @@ def serve_files(conn, addr):
         if request.split()[1] == '/files':
             file_list = ''
             for file in uos.listdir():
-                file_list += f'<a href="/files/{file}">{file}</a>'
+                file_list += f'<li><a href="/files/{file}">{file}</a></li>'
             response = HTML_TEMPLATE.format(file_list)
+        elif request.split()[1].startswith('/files/'):
+            filename = request.split()[1][7:]
+            if file_exists(filename):
+                with open(filename, 'rb') as f:
+                    content = f.read()
+                response = 'HTTP/1.1 200 OK\r\nContent-Type: application/octet-stream\r\nContent-Disposition: attachment; filename="{}"\r\n\r\n'.format(filename)
+                conn.sendall(response.encode())
+                conn.sendall(content)
+            else:
+                response = 'HTTP/1.1 404 Not Found\r\n\r\n'
         else:
             response = 'HTTP/1.1 404 Not Found\r\n\r\n'
     elif request_method == 'POST':
@@ -96,5 +106,6 @@ def start_server():
         conn, addr = s.accept()
         print("Connection from:", addr)
         serve_files(conn, addr)
+        conn.close()
 
 start_server()
