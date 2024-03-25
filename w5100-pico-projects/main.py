@@ -1,7 +1,17 @@
-import usocket as socket
+from usocket import socket
+from machine import Pin,SPI
+#import network
+#import time
+import json
+#import usocket as socket
 import uos
 import time
 import network
+import machine
+import _thread
+
+
+led = Pin(25, Pin.OUT)
 
 HTML_TEMPLATE = """<!DOCTYPE html>
 <html>
@@ -17,92 +27,147 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 </html>
 """
 
+
 def file_exists(filename):
     try:
         uos.stat(filename)
         return True
     except OSError:
         return False
+    
+#W5x00 chip init
+def w5x00_init():
+    spi=SPI(0,2_000_000, mosi=Pin(19),miso=Pin(16),sck=Pin(18))
+    nic = network.WIZNET5K(spi,Pin(17),Pin(20)) #spi,cs,reset pin
+    nic.active(True)
+    
+    #None DHCP
+    nic.ifconfig(('192.168.0.22','255.255.255.0','192.168.0.1','8.8.8.8'))
+    
+    #DHCP
+    #nic.ifconfig('dhcp')
+    print('IP address :', nic.ifconfig())
+    
+    while not nic.isconnected():
+        time.sleep(1)
+        print(nic.regs())
 
-def get_mac_address():
-    # Initialize the network interface
-    spi = network.SPI(1)
-    cs = machine.Pin(10)
-    rst = machine.Pin(9)
-    nic = network.WIZNET5K(spi, cs, rst, wiz_type=network.WIZNET5K.W5100S)
-    return nic.mac_address
+fan_status = {}
+gpio_status = {}
+lock_status = {}
+rgb_status = {}
 
-def serve_files(conn, addr):
-    request = conn.recv(1024).decode()
-    request_method = request.split(' ')[0]
-    if request_method == 'GET':
-        if request.split()[1] == '/files':
-            file_list = ''
-            for file in uos.listdir():
-                file_list += f'<li><a href="/files/{file}">{file}</a></li>'
-            response = HTML_TEMPLATE.format(file_list)
-        elif request.split()[1].startswith('/files/'):
-            filename = request.split()[1][7:]
-            if file_exists(filename):
-                with open(filename, 'rb') as f:
-                    content = f.read()
-                response = 'HTTP/1.1 200 OK\r\nContent-Type: application/octet-stream\r\nContent-Disposition: attachment; filename="{}"\r\n\r\n'.format(filename)
-                conn.sendall(response.encode())
-                conn.sendall(content)
+def set_response(client, json_type, response):
+    client.send('HTTP/1.0 200 OK\r\n')
+    if json_type:
+        client.send('Content-type: application/json\r\n\r\n')
+        client.sendall(response)
+    else:
+        client.send('\r\n')
+        client.sendall(response)
+
+def parse_path(path):
+    return path.split('/')[1:]
+
+def handle_request(client):
+    try:
+        request = client.recv(1024).decode('utf-8')
+        path = parse_path(request.split(' ')[1])
+        print(path)
+        if path[0] == 'security' and len(path) > 2:
+            response = "OK"
+            set_response(client, json_type=False, response=response)
+            return
+        elif path[0].startswith("gpio") and len(path) > 2:
+            pin = int(path[0][4:])
+            print(pin)
+            action = path[1]
+            if action in ['on', 'off', 'status']:
+                if action == 'on':
+                    gpio_status[pin] = 1
+                    response = "OK"
+                    led.value(1)
+                    # Add your GPIO handling code here
+                elif action == 'off':
+                    gpio_status[pin] = 0
+                    response = "OK"
+                    led.value(0)
+                    # Add your GPIO handling code here
+                elif action == 'status':
+                    if pin not in gpio_status:
+                        gpio_status[pin] = 0
+                    response = str(gpio_status[pin])
+                set_response(client, json_type=False, response=response)
+                return
+        response = {'status': 'error', 'message': 'Error from RPI'}
+        # Add similar handling for other routes
+        request_method = request.split(' ')[0]
+        if request_method == 'GET':
+            if request.split()[1] == '/files':
+                file_list = ''
+                for file in uos.listdir():
+                    file_list += f'<li><a href="/files/{file}">{file}</a></li>'
+                response = HTML_TEMPLATE.format(file_list)
+            elif request.split()[1].startswith('/files/'):
+                filename = request.split()[1][7:]
+                if file_exists(filename):
+                    with open(filename, 'rb') as f:
+                        content = f.read()
+                    response = 'HTTP/1.1 200 OK\r\nContent-Type: application/octet-stream\r\nContent-Disposition: attachment; filename="{}"\r\n\r\n'.format(filename)
+                    client.sendall(response.encode())
+                    client.sendall(content)
+                else:
+                    response = 'HTTP/1.1 404 Not Found\r\n\r\n'
+            else:
+                response = 'HTTP/1.1 404 Not Found\r\n\r\n'
+        elif request_method == 'POST':
+            if '/upload' in request:
+                content_length = int(request.split('Content-Length: ')[1].split('\r\n')[0])
+                content = client.recv(content_length)
+                filename = content.split(b'filename="')[1].split(b'"')[0].decode()
+                print("Filename: ",filename)
+                with open(filename, 'wb') as f:
+                    f.write(content)
+                if file_exists(filename):
+                    response = f"File {filename} Replaced successfully."
+                else:
+                    response = f"File {filename} uploaded successfully."
             else:
                 response = 'HTTP/1.1 404 Not Found\r\n\r\n'
         else:
-            response = 'HTTP/1.1 404 Not Found\r\n\r\n'
-    elif request_method == 'POST':
-        if '/upload' in request:
-            content_length = int(request.split('Content-Length: ')[1].split('\r\n')[0])
-            content = conn.recv(content_length)
-            filename = content.split(b'filename="')[1].split(b'"')[0].decode()
-            print("Filename: ",filename)
-            with open(filename, 'wb') as f:
-                f.write(content)
-            if file_exists(filename):
-                response = f"File {filename} Replaced successfully."
-            else:
-                response = f"File {filename} uploaded successfully."
-        else:
-            response = 'HTTP/1.1 404 Not Found\r\n\r\n'
-    else:
-        response = 'HTTP/1.1 405 Method Not Allowed\r\n\r\n'
+            response = 'HTTP/1.1 405 Method Not Allowed\r\n\r\n'
 
-    conn.sendall(response.encode())
-    conn.close()
+        # If the URL doesn't match our pattern, serve a 404 response
+        #client.send('HTTP/1.0 404 Not Found\r\n')
+        #client.send('Content-type: application/json\r\n\r\n')
+        #client.sendall(json.dumps(response).encode())
+        client.sendall(response.encode())
+    except Exception as e:
+        print('Error:', e)
 
-def start_server():
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+def main():
+    w5x00_init()
+    s = socket()
+    import time
+
     while True:
         try:
-            s.bind(("192.168.0.22", 80))
+            s.bind(('', 80))
             break
         except OSError as e:
             if e.args[0] == 98:
                 print("Port 80 is in use, waiting...")
-                print("5")
-                time.sleep(1)
-                print("4")
-                time.sleep(1)
-                print("3")
-                time.sleep(1)
-                print("2")
-                time.sleep(1)
-                print("1")
-                time.sleep(1)
+                time.sleep(5)
             else:
                 raise
     s.listen(5)
-    print("Server started at 192.168.0.22:80")
-    #print("MAC Address:", get_mac_address())
+    print("I'm Listening now...")
 
     while True:
         conn, addr = s.accept()
-        print("Connection from:", addr)
-        serve_files(conn, addr)
+        handle_request(conn)
         conn.close()
 
-start_server()
-
+if __name__ == "__main__":
+    main()
