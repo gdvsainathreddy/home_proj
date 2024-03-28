@@ -1,18 +1,19 @@
 from usocket import socket
-from machine import Pin,SPI
-#import network
-#import time
+from machine import Pin, SPI
 import json
-#import usocket as socket
 import uos
 import time
 import network
-import machine
-import _thread
 
-
+# Initialize LED pin
 led = Pin(25, Pin.OUT)
 
+# Global dictionaries to store statuses
+gpio_status = {}
+lock_status = {}
+rgb_status = {}
+
+# HTML template for file server
 HTML_TEMPLATE = """<!DOCTYPE html>
 <html>
 <head><title>File Server</title></head>
@@ -29,35 +30,32 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 
 def file_exists(filename):
+    """Check if file exists."""
     try:
         uos.stat(filename)
         return True
     except OSError:
         return False
-    
-#W5x00 chip init
+
+
 def w5x00_init():
-    spi=SPI(0,2_000_000, mosi=Pin(19),miso=Pin(16),sck=Pin(18))
-    nic = network.WIZNET5K(spi,Pin(17),Pin(20)) #spi,cs,reset pin
+    """Initialize W5x00 chip."""
+    spi = SPI(0, 2_000_000, mosi=Pin(19), miso=Pin(16), sck=Pin(18))
+    nic = network.WIZNET5K(spi, Pin(17), Pin(20))  # spi,cs,reset pin
     nic.active(True)
-    
-    #None DHCP
-    nic.ifconfig(('192.168.0.22','255.255.255.0','192.168.0.1','8.8.8.8'))
-    
-    #DHCP
-    #nic.ifconfig('dhcp')
-    print('IP address :', nic.ifconfig())
-    
+
+    # Static IP configuration
+    nic.ifconfig(('192.168.0.22', '255.255.255.0', '192.168.0.1', '8.8.8.8'))
+
+    print('IP address:', nic.ifconfig())
+
     while not nic.isconnected():
         time.sleep(1)
         print(nic.regs())
 
-fan_status = {}
-gpio_status = {}
-lock_status = {}
-rgb_status = {}
 
 def set_response(client, json_type, response):
+    """Set HTTP response."""
     client.send('HTTP/1.0 200 OK\r\n')
     if json_type:
         client.send('Content-type: application/json\r\n\r\n')
@@ -66,90 +64,83 @@ def set_response(client, json_type, response):
         client.send('\r\n')
         client.sendall(response)
 
+
 def parse_path(path):
+    """Parse URL path."""
     return path.split('/')[1:]
 
+
+def handle_gpio_request(pin, action):
+    """Handle GPIO requests."""
+    if action == 'on':
+        gpio_status[pin] = 1
+        led.value(1)
+    elif action == 'off':
+        gpio_status[pin] = 0
+        led.value(0)
+    elif action == 'status':
+        if pin not in gpio_status:
+            gpio_status[pin] = 0
+    return str(gpio_status[pin])
+
+
 def handle_request(client):
+    """Handle HTTP requests."""
     try:
         request = client.recv(1024).decode('utf-8')
         path = parse_path(request.split(' ')[1])
-        print(path)
+
         if path[0] == 'security' and len(path) > 2:
             response = "OK"
             set_response(client, json_type=False, response=response)
             return
         elif path[0].startswith("gpio") and len(path) > 2:
             pin = int(path[0][4:])
-            print(pin)
             action = path[1]
             if action in ['on', 'off', 'status']:
-                if action == 'on':
-                    gpio_status[pin] = 1
-                    response = "OK"
-                    led.value(1)
-                    # Add your GPIO handling code here
-                elif action == 'off':
-                    gpio_status[pin] = 0
-                    response = "OK"
-                    led.value(0)
-                    # Add your GPIO handling code here
-                elif action == 'status':
-                    if pin not in gpio_status:
-                        gpio_status[pin] = 0
-                    response = str(gpio_status[pin])
+                response = handle_gpio_request(pin, action)
                 set_response(client, json_type=False, response=response)
                 return
-        response = {'status': 'error', 'message': 'Error from RPI'}
-        # Add similar handling for other routes
-        request_method = request.split(' ')[0]
-        if request_method == 'GET':
-            if request.split()[1] == '/files':
+        elif path[0] == 'files':
+            if len(path) == 1:  # List files
                 file_list = ''
                 for file in uos.listdir():
                     file_list += f'<li><a href="/files/{file}">{file}</a></li>'
                 response = HTML_TEMPLATE.format(file_list)
-            elif request.split()[1].startswith('/files/'):
-                filename = request.split()[1][7:]
+                set_response(client, json_type=False, response=response)
+                return
+            elif len(path) == 2:  # Serve file
+                filename = path[1]
                 if file_exists(filename):
                     with open(filename, 'rb') as f:
                         content = f.read()
                     response = 'HTTP/1.1 200 OK\r\nContent-Type: application/octet-stream\r\nContent-Disposition: attachment; filename="{}"\r\n\r\n'.format(filename)
                     client.sendall(response.encode())
                     client.sendall(content)
-                else:
-                    response = 'HTTP/1.1 404 Not Found\r\n\r\n'
+                    return
+        # Handling for other routes
+        # ...
+        # Handle POST request for file upload
+        elif request.startswith('POST /upload'):
+            content_length = int(request.split('Content-Length: ')[1].split('\r\n')[0])
+            content = client.recv(content_length)
+            filename = content.split(b'filename="')[1].split(b'"')[0].decode()
+            with open(filename, 'wb') as f:
+                f.write(content)
+            if file_exists(filename):
+                response = f"File {filename} Replaced successfully."
             else:
-                response = 'HTTP/1.1 404 Not Found\r\n\r\n'
-        elif request_method == 'POST':
-            if '/upload' in request:
-                content_length = int(request.split('Content-Length: ')[1].split('\r\n')[0])
-                content = client.recv(content_length)
-                filename = content.split(b'filename="')[1].split(b'"')[0].decode()
-                print("Filename: ",filename)
-                with open(filename, 'wb') as f:
-                    f.write(content)
-                if file_exists(filename):
-                    response = f"File {filename} Replaced successfully."
-                else:
-                    response = f"File {filename} uploaded successfully."
-            else:
-                response = 'HTTP/1.1 404 Not Found\r\n\r\n'
-        else:
-            response = 'HTTP/1.1 405 Method Not Allowed\r\n\r\n'
-
-        # If the URL doesn't match our pattern, serve a 404 response
-        #client.send('HTTP/1.0 404 Not Found\r\n')
-        #client.send('Content-type: application/json\r\n\r\n')
-        #client.sendall(json.dumps(response).encode())
-        client.sendall(response.encode())
+                response = f"File {filename} uploaded successfully."
+            set_response(client, json_type=False, response=response)
+            return
     except Exception as e:
         print('Error:', e)
 
 
 def main():
+    """Main function."""
     w5x00_init()
     s = socket()
-    import time
 
     while True:
         try:
@@ -162,12 +153,13 @@ def main():
             else:
                 raise
     s.listen(5)
-    print("I'm Listening now...")
+    print("Listening now...")
 
     while True:
         conn, addr = s.accept()
         handle_request(conn)
         conn.close()
+
 
 if __name__ == "__main__":
     main()
